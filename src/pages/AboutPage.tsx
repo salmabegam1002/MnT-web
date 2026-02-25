@@ -21,7 +21,7 @@ const AI_STRATEGIC_ITEMS = [
     label: "OUR MISSION",
     summary: "Strategic transformation through architectural precision.",
     description: "To engineer intelligent digital foundations that empower enterprises to lead with architectural precision and operational excellence. We focus on building resilient systems that solve today's friction and anticipate tomorrow's opportunity.",
-    image: "/mision.png",
+    image: `${import.meta.env.BASE_URL}mision.png`,
     color: "from-blue-600/90 to-indigo-900/90"
   },
   {
@@ -30,7 +30,7 @@ const AI_STRATEGIC_ITEMS = [
     label: "OUR VISION",
     summary: "Setting the benchmark for systemic intelligence.",
     description: "To be the global benchmark for systemic intelligence, where every line of code architected builds a more resilient and scalable future. We envision an enterprise landscape where AI is natively integrated into every architectural layer.",
-    image: "public/vision.png",
+    image: `${import.meta.env.BASE_URL}vision.png`,
     color: "from-teal-600/90 to-emerald-950/90"
   },
   {
@@ -39,7 +39,7 @@ const AI_STRATEGIC_ITEMS = [
     label: "OUR VALUES",
     summary: "Integrity, Precision, and Collaborative Growth.",
     description: "Architectural Integrity, Radical Transparency, Engineering Precision, and Collaborative Growth define our core DNA. We believe that true intelligence is built on a foundation of trust and engineering excellence.",
-    image: "public/values.png",
+    image: `${import.meta.env.BASE_URL}values.png`,
     color: "from-sky-600/90 to-blue-900/90"
   },
   {
@@ -48,7 +48,7 @@ const AI_STRATEGIC_ITEMS = [
     label: "OUR GOALS",
     summary: "Accelerating global AI adoption with local expertise.",
     description: "Accelerate global AI adoption through localized engineering expertise and resilient enterprise infrastructure. We aim to deploy 10,000+ intelligent systems across the region by 2030, driving industrial efficiency at scale.",
-    image: "public/goals.png",
+    image: `${import.meta.env.BASE_URL}goals.png`,
     color: "from-cyan-600/90 to-blue-900/90"
   }
 ];

@@ -38,7 +38,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "iSuite AI",
         tagline: "Centralized Intelligence Layer",
         description: "A unified AI core designed to orchestrate enterprise-wide intelligence. iSuite AI acts as the brain of your digital infrastructure, coordinating autonomous agents and complex workflows with surgical precision.",
-        image: "public/isuiteai.png",
+        image: `${import.meta.env.BASE_URL}isuiteai.png`,
         features: [
             { title: "Neural Orchestration", icon: Brain, description: "Coalesce multiple AI models into a single, high-performance decision engine." },
             { title: "Autonomous Workflows", icon: Zap, description: "Self-managing processes that adapt to real-time data shifts without human intervention." },
@@ -72,7 +72,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "iSuite CRM",
         tagline: "Predictive Customer Intelligence",
         description: "Transform your customer relationships with AI-driven insights. iSuite CRM goes beyond traditional tracking, predicting customer needs and automating the entire sales funnel.",
-        image: "public/isuiteio.png",
+        image: `${import.meta.env.BASE_URL}isuiteio.png`,
         features: [
             { title: "Lead Scoring AI", icon: BarChart3, description: "Rank leads based on their likelihood to convert using historical behavioral patterns." },
             { title: "Automated Outreach", icon: MessageSquare, description: "Autonomous agents that handle initial engagement and qualification 24/7." },
@@ -106,7 +106,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "iSuite Healthcare",
         tagline: "Intelligent Patient Outcomes",
         description: "Bridging the gap between clinical data and patient care. iSuite Healthcare uses specialized AI to streamline hospital management and enhance diagnostic accuracy.",
-        image: "public/isuitehealth.png",
+        image: `${import.meta.env.BASE_URL}isuitehealth.png`,
         features: [
             { title: "Diagnostic Support", icon: Stethoscope, description: "AI-assisted analysis of clinical reports and imaging for faster triage." },
             { title: "Patient Flow IQ", icon: Workflow, description: "Optimize bed management and staff allocation in real-time." },
@@ -140,7 +140,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "iSuite Education",
         tagline: "Adaptive Learning Infrastructure",
         description: "The future of personalized education. iSuite Education uses AI to create custom learning paths and automate institutional administration at scale.",
-        image: "public/isuiteedu.png",
+        image: `${import.meta.env.BASE_URL}isuiteedu.png`,
         features: [
             { title: "Adaptive Curriculum", icon: GraduationCap, description: "Content that adjusts its complexity based on individual student performance." },
             { title: "AI Teaching Assistant", icon: Bot, description: "24/7 tutor that answers student queries and provides instant feedback." },

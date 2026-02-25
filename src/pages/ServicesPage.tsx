@@ -392,7 +392,7 @@ const IndustryImpact = () => {
             >
               {/* Parallax Image Component */}
               <motion.img
-                src="public/mnt.png"
+                src={`${import.meta.env.BASE_URL}mnt.png`}
                 alt="AI Enterprise Infrastructure"
                 className="absolute inset-0 w-full h-full object-cover scale-110 rounded-[2rem] shadow-sm"
                 style={{

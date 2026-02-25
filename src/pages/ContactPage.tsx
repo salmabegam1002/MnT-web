@@ -1,11 +1,10 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { Send, Mail, Phone, MapPin, ArrowRight, ChevronDown, Download, Check, Image as ImageIcon, Loader2, X } from "lucide-react";
+import { Send, Mail, Phone, MapPin, ArrowRight, ChevronDown, Download, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { uploadToCloudinary } from "@/lib/cloudinary";
 
 /* ──────────────────────────────────────────────
    Data
@@ -141,10 +140,8 @@ const ContactPage = () => {
     phone: "",
     service: "",
     message: "",
-    imageUrl: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isUploading, setIsUploading] = useState(false);
   const formRef = useRef<HTMLElement>(null);
 
   const scrollToForm = () => {
@@ -179,52 +176,8 @@ const ContactPage = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    // Optional: Add file size/type validation
-    if (file.size > 5 * 1024 * 1024) {
-      toast({
-        title: "File too large",
-        description: "Please upload an image smaller than 5MB.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsUploading(true);
-    try {
-      const url = await uploadToCloudinary(file);
-      setFormData((prev) => ({ ...prev, imageUrl: url }));
-      toast({
-        title: "Image Uploaded",
-        description: "Your image has been successfully attached to the form.",
-      });
-    } catch (error) {
-      toast({
-        title: "Upload Failed",
-        description: "There was an error uploading your image. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsUploading(false);
-    }
-  };
-
-  const removeImage = () => {
-    setFormData((prev) => ({ ...prev, imageUrl: "" }));
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isUploading) {
-      toast({
-        title: "Wait a moment",
-        description: "Your image is still uploading. Please wait.",
-      });
-      return;
-    }
     setIsSubmitting(true);
 
     // In a real app, you'd send formData (including imageUrl) to your backend
@@ -235,7 +188,7 @@ const ContactPage = () => {
       title: "Consultation Requested",
       description: "Our team will reach out to you within 24 hours.",
     });
-    setFormData({ name: "", company: "", email: "", phone: "", service: "", message: "", imageUrl: "" });
+    setFormData({ name: "", company: "", email: "", phone: "", service: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -564,63 +517,6 @@ const ContactPage = () => {
                       placeholder="Describe your project or goals…"
                       className="contact-input resize-none"
                     />
-                  </div>
-
-                  {/* Image Upload Field */}
-                  <div className="space-y-3">
-                    <label className="contact-label">Attach Screenshot or Reference (Optional)</label>
-
-                    {!formData.imageUrl ? (
-                      <div className="relative group">
-                        <input
-                          type="file"
-                          id="file-upload"
-                          className="hidden"
-                          accept="image/*"
-                          onChange={handleFileChange}
-                          disabled={isUploading}
-                        />
-                        <label
-                          htmlFor="file-upload"
-                          className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-slate-200 rounded-2xl bg-slate-50/50 cursor-pointer transition-all duration-300 group-hover:border-primary/40 group-hover:bg-primary/5 ${isUploading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                        >
-                          <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                            {isUploading ? (
-                              <Loader2 className="w-8 h-8 text-primary animate-spin mb-2" />
-                            ) : (
-                              <ImageIcon className="w-8 h-8 text-slate-400 group-hover:text-primary transition-colors mb-2" />
-                            )}
-                            <p className="text-sm text-slate-500 font-medium">
-                              {isUploading ? "Uploading to Cloudinary..." : "Click to upload or drag and drop"}
-                            </p>
-                            <p className="text-xs text-slate-400 mt-1">PNG, JPG or WebP (Max. 5MB)</p>
-                          </div>
-                        </label>
-                      </div>
-                    ) : (
-                      <div className="relative inline-block">
-                        <div className="w-40 h-28 rounded-xl overflow-hidden border border-slate-200 group">
-                          <img
-                            src={formData.imageUrl}
-                            alt="Uploaded preview"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <button
-                              type="button"
-                              onClick={removeImage}
-                              className="p-1.5 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-red-500/80 transition-colors"
-                            >
-                              <X className="w-4 h-4" />
-                            </button>
-                          </div>
-                        </div>
-                        <div className="mt-2 flex items-center gap-2">
-                          <Check className="w-3.5 h-3.5 text-green-500" />
-                          <span className="text-xs text-green-600 font-semibold tracking-wide uppercase">Uploaded successfully</span>
-                        </div>
-                      </div>
-                    )}
                   </div>
 
                   {/* Buttons */}

@@ -152,7 +152,7 @@ const RobotVisual = () => {
       >
         <div className="relative w-full h-full flex items-center justify-center">
           <img
-            src="/robomnt.png"
+            src={`${import.meta.env.BASE_URL}robomnt.png`}
             alt="Futuristic AI Robot"
             className="w-[98%] h-[98%] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-700 pointer-events-none"
           />

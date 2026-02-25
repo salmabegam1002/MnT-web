@@ -7,28 +7,28 @@ const products = [
         id: "core",
         title: "iSuite AI",
         desc: "Centralized intelligence layer for process automation and decision support. Configurable workflows that adapt to your business rules.",
-        image: "public/isuiteai.png",
+        image: `${import.meta.env.BASE_URL}isuiteai.png`,
         tags: ["Core", "AI", "Automation"]
     },
     {
         id: "analytics",
         title: "iSuite CRM",
         desc: "Predictive modeling and real-time visualization for high-stakes business data. Turn raw streams into actionable strategic insights.",
-        image: "public/isuiteio.png",
+        image: `${import.meta.env.BASE_URL}isuiteio.png`,
         tags: ["Data", "Insight", "Predictive"]
     },
     {
         id: "connect",
         title: "iSuite HealthCare",
         desc: "Seamless integration framework for modern digital infrastructures. Bridge legacy systems with next-gen AI capabilities effortlessly.",
-        image: "public/isuitehealth.png",
+        image: `${import.meta.env.BASE_URL}isuitehealth.png`,
         tags: ["Integration", "Cloud", "Scalable"]
     },
     {
         id: "vision",
         title: "iSuite Education",
         desc: "Advanced computer vision models for quality control and security. Automated visual inspection with human-level accuracy at scale.",
-        image: "public/isuiteedu.png",
+        image: `${import.meta.env.BASE_URL}isuiteedu.png`,
         tags: ["Computer Vision", "Security", "ML"]
     }
 ];

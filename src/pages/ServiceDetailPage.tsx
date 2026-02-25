@@ -325,7 +325,7 @@ const ServiceDetailPage = () => {
                             >
                                 <div className="relative rounded-[2rem] overflow-hidden">
                                     <img
-                                        src="/robomnt2.png"
+                                        src={`${import.meta.env.BASE_URL}robomnt2.png`}
                                         className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-[1.03]"
                                     />
                                 </div>

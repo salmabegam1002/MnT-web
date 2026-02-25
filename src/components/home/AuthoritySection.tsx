@@ -30,7 +30,7 @@ const FloatingIcon = ({
 );
 
 /* ─── HD AI Illustration ─── */
-const AI_ILLUSTRATION = "public/about.png";
+const AI_ILLUSTRATION = `${import.meta.env.BASE_URL}about.png`;
 
 
 
