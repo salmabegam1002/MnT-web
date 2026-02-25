@@ -167,10 +167,12 @@ const FlowItem = ({ item, index }: { item: typeof PHILOSOPHY_ITEMS[0]; index: nu
         <p className="text-lg md:text-xl text-slate-400 font-medium leading-relaxed max-w-md mx-auto md:mx-0">
           {item.description}
         </p>
-        <div className="pt-4 flex items-center justify-center md:justify-start gap-4 text-primary font-bold tracking-widest uppercase text-xs">
-          <span>Explore Layers</span>
-          <ArrowRight className="w-4 h-4" />
-        </div>
+        <Link to="/contact">
+          <div className="pt-4 flex items-center justify-center md:justify-start gap-4 text-primary font-bold tracking-widest uppercase text-xs">
+            <span>Explore Layers</span>
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </Link>
       </motion.div>
     </div>
   );
@@ -258,7 +260,7 @@ const AICharacterExperience = () => {
         <div className="max-w-3xl mb-8">
           <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Strategic Foundation</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-slate-900 tracking-tighter">
-            Architectural <span className="text-enterprise-gradient italic">Narrative.</span>
+            Architectural <span className="text-enterprise-gradient">Narrative</span>
           </h2>
         </div>
 
