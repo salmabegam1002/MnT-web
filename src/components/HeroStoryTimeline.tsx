@@ -5,39 +5,39 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 const BusinessProblemDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Desk */}
-        <motion.path d="M20 95 L120 95" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5 }} />
-        <motion.path d="M30 95 L30 115 M110 95 L110 115" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.2 }} />
+        <motion.path d="M20 95 L120 95" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35 }} />
+        <motion.path d="M30 95 L30 115 M110 95 L110 115" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.15 }} />
         {/* Laptop on desk */}
-        <motion.path d="M50 95 L50 78 L90 78 L90 95" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 0.4 }} />
-        <motion.rect x="52" y="80" width="36" height="13" rx="1" stroke="currentColor" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.6 }} />
+        <motion.path d="M50 95 L50 78 L90 78 L90 95" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.3 }} />
+        <motion.rect x="52" y="80" width="36" height="13" rx="1" stroke="currentColor" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.45 }} />
         {/* Red declining chart on screen */}
-        <motion.path d="M56 90 L62 88 L68 91 L74 89 L80 92 L84 91" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8, delay: 0.9 }} />
-        <motion.path d="M80 92 L84 91 L82 88" stroke="hsl(var(--destructive))" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.5 }} />
+        <motion.path d="M56 90 L62 88 L68 91 L74 89 L80 92 L84 91" stroke="hsl(var(--destructive))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.6 }} />
+        <motion.path d="M80 92 L84 91 L82 88" stroke="hsl(var(--destructive))" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.0 }} />
         {/* Person sitting — head */}
-        <motion.circle cx="70" cy="55" r="10" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }} />
+        <motion.circle cx="70" cy="55" r="10" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.2 }} />
         {/* Worried eyebrows */}
-        <motion.path d="M64 51 L67 53 M73 53 L76 51" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.8 }} />
+        <motion.path d="M64 51 L67 53 M73 53 L76 51" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.5 }} />
         {/* Eyes */}
-        <motion.circle cx="66" cy="54" r="1.2" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.7 }} />
-        <motion.circle cx="74" cy="54" r="1.2" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.7 }} />
+        <motion.circle cx="66" cy="54" r="1.2" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.45 }} />
+        <motion.circle cx="74" cy="54" r="1.2" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.45 }} />
         {/* Frown */}
-        <motion.path d="M65 59 Q70 63 75 59" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.9 }} />
+        <motion.path d="M65 59 Q70 63 75 59" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.6 }} />
         {/* Body hunched over */}
-        <motion.path d="M70 65 L70 78" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.5 }} />
+        <motion.path d="M70 65 L70 78" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.35 }} />
         {/* Hands on head in stress */}
-        <motion.path d="M70 70 L58 60 M70 70 L82 60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.6 }} />
+        <motion.path d="M70 70 L58 60 M70 70 L82 60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.45 }} />
         {/* Stress lines around head */}
-        <motion.path d="M52 48 L48 44 M88 48 L92 44 M70 40 L70 36" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.2 }} />
+        <motion.path d="M52 48 L48 44 M88 48 L92 44 M70 40 L70 36" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.8 }} />
         {/* Scattered papers on desk */}
-        <motion.rect x="28" y="85" width="12" height="8" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" transform="rotate(-8 34 89)" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.3 }} />
-        <motion.rect x="95" y="84" width="14" height="9" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" transform="rotate(5 102 88)" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.4 }} />
+        <motion.rect x="28" y="85" width="12" height="8" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" transform="rotate(-8 34 89)" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.25, delay: 1.0 }} />
+        <motion.rect x="95" y="84" width="14" height="9" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" transform="rotate(5 102 88)" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.25, delay: 1.1 }} />
         {/* Floating question marks */}
-        <motion.text x="38" y="42" fontSize="14" fontFamily="serif" fill="currentColor" opacity="0" initial={{ opacity: 0, y: 5 }} animate={isActive ? { opacity: [0, 0.6, 0.6], y: [5, 0, 0] } : {}} transition={{ delay: 1.5, duration: 0.5 }}>?</motion.text>
-        <motion.text x="95" y="38" fontSize="11" fontFamily="serif" fill="currentColor" opacity="0" initial={{ opacity: 0, y: 5 }} animate={isActive ? { opacity: [0, 0.4, 0.4], y: [5, 0, 0] } : {}} transition={{ delay: 1.7, duration: 0.5 }}>?</motion.text>
+        <motion.text x="38" y="42" fontSize="14" fontFamily="serif" fill="currentColor" opacity="0" initial={{ opacity: 0, y: 5 }} animate={isActive ? { opacity: [0, 0.6, 0.6], y: [5, 0, 0] } : {}} transition={{ delay: 1.2, duration: 0.3 }} >?</motion.text>
+        <motion.text x="95" y="38" fontSize="11" fontFamily="serif" fill="currentColor" opacity="0" initial={{ opacity: 0, y: 5 }} animate={isActive ? { opacity: [0, 0.4, 0.4], y: [5, 0, 0] } : {}} transition={{ delay: 1.3, duration: 0.3 }} >?</motion.text>
         {/* Coffee cup */}
-        <motion.path d="M100 88 L100 95 L108 95 L108 88 M108 90 L112 90 L112 93 L108 93" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }} />
+        <motion.path d="M100 88 L100 95 L108 95 L108 88 M108 90 L112 90 L112 93 L108 93" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.2 }} />
         {/* Steam from coffee */}
-        <motion.path d="M102 86 Q103 83 104 86 M106 86 Q107 82 108 86" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 2 }} />
+        <motion.path d="M102 86 Q103 83 104 86 M106 86 Q107 82 108 86" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.5 }} />
     </svg>
 );
 
@@ -45,40 +45,40 @@ const BusinessProblemDoodle = ({ isActive }: { isActive: boolean }) => (
 const TeamThinkingDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Round meeting table */}
-        <motion.ellipse cx="70" cy="90" rx="45" ry="12" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8 }} />
-        <motion.path d="M70 102 L70 120" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.3 }} />
-        <motion.path d="M55 120 L85 120" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.4 }} />
+        <motion.ellipse cx="70" cy="90" rx="45" ry="12" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5 }} />
+        <motion.path d="M70 102 L70 120" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.2 }} />
+        <motion.path d="M55 120 L85 120" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.3 }} />
         {/* Person 1 — left */}
-        <motion.circle cx="28" cy="62" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.3 }} />
-        <motion.path d="M28 70 L28 85 M28 75 L20 82 M28 75 L36 82" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }} />
+        <motion.circle cx="28" cy="62" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.2 }} />
+        <motion.path d="M28 70 L28 85 M28 75 L20 82 M28 75 L36 82" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.35 }} />
         {/* Eyes & smile */}
-        <motion.circle cx="25" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.6 }} />
-        <motion.circle cx="31" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.6 }} />
+        <motion.circle cx="25" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.4 }} />
+        <motion.circle cx="31" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.4 }} />
         {/* Person 2 — center */}
-        <motion.circle cx="70" cy="55" r="9" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }} />
-        <motion.path d="M70 64 L70 82 M70 70 L60 78 M70 70 L80 78" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.7 }} />
-        <motion.circle cx="67" cy="54" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.8 }} />
-        <motion.circle cx="73" cy="54" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.8 }} />
+        <motion.circle cx="70" cy="55" r="9" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.35 }} />
+        <motion.path d="M70 64 L70 82 M70 70 L60 78 M70 70 L80 78" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.5 }} />
+        <motion.circle cx="67" cy="54" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.55 }} />
+        <motion.circle cx="73" cy="54" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.55 }} />
         {/* Person 3 — right */}
-        <motion.circle cx="112" cy="62" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.7 }} />
-        <motion.path d="M112 70 L112 85 M112 75 L104 82 M112 75 L120 82" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.9 }} />
-        <motion.circle cx="109" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1 }} />
-        <motion.circle cx="115" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1 }} />
+        <motion.circle cx="112" cy="62" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.5 }} />
+        <motion.path d="M112 70 L112 85 M112 75 L104 82 M112 75 L120 82" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.65 }} />
+        <motion.circle cx="109" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.7 }} />
+        <motion.circle cx="115" cy="61" r="1" fill="currentColor" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.7 }} />
         {/* Speech bubbles */}
-        <motion.circle cx="40" cy="50" r="3" stroke="currentColor" strokeWidth="1" opacity="0.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.2 }} />
-        <motion.circle cx="48" cy="42" r="2" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.3 }} />
-        <motion.circle cx="100" cy="50" r="3" stroke="currentColor" strokeWidth="1" opacity="0.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.4 }} />
-        <motion.circle cx="92" cy="42" r="2" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.5 }} />
+        <motion.circle cx="40" cy="50" r="3" stroke="currentColor" strokeWidth="1" opacity="0.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.85 }} />
+        <motion.circle cx="48" cy="42" r="2" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 0.9 }} />
+        <motion.circle cx="100" cy="50" r="3" stroke="currentColor" strokeWidth="1" opacity="0.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.0 }} />
+        <motion.circle cx="92" cy="42" r="2" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.05 }} />
         {/* Central lightbulb */}
-        <motion.path d="M63 22 Q63 8 70 8 Q77 8 77 22 L74 28 L66 28 Z" stroke="hsl(var(--primary))" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8, delay: 1.3 }} />
-        <motion.path d="M66 30 L74 30 M67 33 L73 33" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.8 }} />
+        <motion.path d="M63 22 Q63 8 70 8 Q77 8 77 22 L74 28 L66 28 Z" stroke="hsl(var(--primary))" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 0.9 }} />
+        <motion.path d="M66 30 L74 30 M67 33 L73 33" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.25 }} />
         {/* Light rays */}
-        <motion.path d="M70 2 L70 -2 M56 10 L52 6 M84 10 L88 6 M54 22 L49 22 M86 22 L91 22" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0, opacity: 0 }} animate={isActive ? { pathLength: 1, opacity: 0.7 } : {}} transition={{ duration: 0.6, delay: 1.8 }} />
+        <motion.path d="M70 2 L70 -2 M56 10 L52 6 M84 10 L88 6 M54 22 L49 22 M86 22 L91 22" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0, opacity: 0 }} animate={isActive ? { pathLength: 1, opacity: 0.7 } : {}} transition={{ duration: 0.4, delay: 1.25 }} />
         {/* Glow */}
-        <motion.circle cx="70" cy="18" r="18" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0 }} animate={isActive ? { opacity: [0, 0.08, 0.04] } : {}} transition={{ delay: 2, duration: 1 }} />
+        <motion.circle cx="70" cy="18" r="18" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0 }} animate={isActive ? { opacity: [0, 0.08, 0.04] } : {}} transition={{ delay: 1.4, duration: 0.7 }} />
         {/* Whiteboard */}
-        <motion.rect x="48" y="78" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="0.8" opacity="0.3" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.6 }} />
-        <motion.rect x="82" y="78" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="0.8" opacity="0.3" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.7 }} />
+        <motion.rect x="48" y="78" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="0.8" opacity="0.3" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.15 }} />
+        <motion.rect x="82" y="78" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="0.8" opacity="0.3" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.2 }} />
     </svg>
 );
 
@@ -86,27 +86,27 @@ const TeamThinkingDoodle = ({ isActive }: { isActive: boolean }) => (
 const PlanningDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Large whiteboard */}
-        <motion.rect x="10" y="8" width="100" height="70" rx="3" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8 }} />
-        <motion.path d="M25 78 L15 120 M95 78 L105 120" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.3 }} />
+        <motion.rect x="10" y="8" width="100" height="70" rx="3" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6 }} />
+        <motion.path d="M25 78 L15 120 M95 78 L105 120" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.2 }} />
         {/* Wireframe on board */}
-        <motion.rect x="16" y="14" width="88" height="10" rx="1.5" stroke="hsl(var(--primary))" strokeWidth="1.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.6 }} />
-        <motion.path d="M20 19 L35 19 M80 19 L85 19 M88 19 L93 19 M95 19 L100 19" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.8 }} />
-        <motion.rect x="16" y="28" width="55" height="22" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1 }} />
-        <motion.path d="M20 34 L50 34 M20 38 L45 38 M20 42 L35 42" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.2 }} />
-        <motion.rect x="75" y="28" width="29" height="42" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.1 }} />
-        <motion.path d="M79 34 L95 34 M79 40 L100 40 M79 46 L92 46 M79 52 L98 52 M79 58 L90 58 M79 64 L96 64" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.4" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 1.3 }} />
-        <motion.rect x="16" y="54" width="17" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.4 }} />
-        <motion.rect x="36" y="54" width="17" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.5 }} />
-        <motion.rect x="56" y="54" width="15" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.6 }} />
+        <motion.rect x="16" y="14" width="88" height="10" rx="1.5" stroke="hsl(var(--primary))" strokeWidth="1.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.4 }} />
+        <motion.path d="M20 19 L35 19 M80 19 L85 19 M88 19 L93 19 M95 19 L100 19" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.55 }} />
+        <motion.rect x="16" y="28" width="55" height="22" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.7 }} />
+        <motion.path d="M20 34 L50 34 M20 38 L45 38 M20 42 L35 42" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.85 }} />
+        <motion.rect x="75" y="28" width="29" height="42" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.75 }} />
+        <motion.path d="M79 34 L95 34 M79 40 L100 40 M79 46 L92 46 M79 52 L98 52 M79 58 L90 58 M79 64 L96 64" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.4" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.9 }} />
+        <motion.rect x="16" y="54" width="17" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.0 }} />
+        <motion.rect x="36" y="54" width="17" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.05 }} />
+        <motion.rect x="56" y="54" width="15" height="14" rx="1.5" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.1 }} />
         {/* Person with pointer */}
-        <motion.circle cx="125" cy="50" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.8 }} />
-        <motion.path d="M125 58 L125 90 M125 65 L112 55 M125 65 L132 80 M125 90 L118 110 M125 90 L132 110" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 1 }} />
-        <motion.path d="M112 55 L80 35" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.8 }} />
+        <motion.circle cx="125" cy="50" r="8" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.55 }} />
+        <motion.path d="M125 58 L125 90 M125 65 L112 55 M125 65 L132 80 M125 90 L118 110 M125 90 L132 110" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.7 }} />
+        <motion.path d="M112 55 L80 35" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.25 }} />
         {/* Annotations */}
-        <motion.rect x="5" y="90" width="18" height="15" rx="1" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.15, scale: 1 } : {}} transition={{ delay: 2 }} />
-        <motion.rect x="28" y="92" width="18" height="15" rx="1" fill="hsl(var(--secondary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.15, scale: 1 } : {}} transition={{ delay: 2.1 }} />
-        <motion.path d="M10 100 L13 103 L19 96" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 2.2 }} />
-        <motion.path d="M33 100 L36 103 L42 96" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 2.3 }} />
+        <motion.rect x="5" y="90" width="18" height="15" rx="1" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.15, scale: 1 } : {}} transition={{ delay: 1.4 }} />
+        <motion.rect x="28" y="92" width="18" height="15" rx="1" fill="hsl(var(--secondary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.15, scale: 1 } : {}} transition={{ delay: 1.45 }} />
+        <motion.path d="M10 100 L13 103 L19 96" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.55 }} />
+        <motion.path d="M33 100 L36 103 L42 96" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.6 }} />
     </svg>
 );
 
@@ -114,27 +114,27 @@ const PlanningDoodle = ({ isActive }: { isActive: boolean }) => (
 const DeveloperCodingDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Desk */}
-        <motion.path d="M10 100 L130 100" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5 }} />
-        <motion.path d="M20 100 L20 125 M120 100 L120 125" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.2 }} />
+        <motion.path d="M10 100 L130 100" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35 }} />
+        <motion.path d="M20 100 L20 125 M120 100 L120 125" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.15 }} />
         {/* Monitor */}
-        <motion.rect x="30" y="30" width="65" height="45" rx="3" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8, delay: 0.2 }} />
-        <motion.path d="M55 75 L55 90 L45 95 L80 95 L70 90 L70 75" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.6 }} />
+        <motion.rect x="30" y="30" width="65" height="45" rx="3" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 0.15 }} />
+        <motion.path d="M55 75 L55 90 L45 95 L80 95 L70 90 L70 75" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.4 }} />
         {/* Code editor */}
-        <motion.path d="M36 38 L39 38 M36 42 L39 42 M36 46 L39 46 M36 50 L39 50" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.8 }} />
-        <motion.path d="M41 34 L41 72" stroke="currentColor" strokeWidth="0.5" opacity="0.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.9 }} />
-        <motion.path d="M44 38 L56 38" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1 }} />
-        <motion.path d="M58 38 L70 38" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.1 }} />
-        <motion.rect x="54" y="60" width="1.5" height="5" fill="hsl(var(--primary))" initial={{ opacity: 0 }} animate={isActive ? { opacity: [0, 1, 0] } : {}} transition={{ delay: 2, duration: 1, repeat: Infinity }} />
+        <motion.path d="M36 38 L39 38 M36 42 L39 42 M36 46 L39 46 M36 50 L39 50" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.55 }} />
+        <motion.path d="M41 34 L41 72" stroke="currentColor" strokeWidth="0.5" opacity="0.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.6 }} />
+        <motion.path d="M44 38 L56 38" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.15, delay: 0.7 }} />
+        <motion.path d="M58 38 L70 38" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.15, delay: 0.75 }} />
+        <motion.rect x="54" y="60" width="1.5" height="5" fill="hsl(var(--primary))" initial={{ opacity: 0 }} animate={isActive ? { opacity: [0, 1, 0] } : {}} transition={{ delay: 1.4, duration: 0.7, repeat: Infinity }} />
         {/* Second monitor */}
-        <motion.rect x="100" y="40" width="30" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }} />
-        <motion.path d="M112 62 L112 68 L107 70 L120 70 L115 68 L115 62" stroke="currentColor" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.7 }} />
-        <motion.path d="M104 46 L108 50 L104 54" stroke="hsl(var(--secondary))" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.5 }} />
-        <motion.path d="M111 54 L122 54" stroke="hsl(var(--secondary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.7 }} />
+        <motion.rect x="100" y="40" width="30" height="22" rx="2" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.35 }} />
+        <motion.path d="M112 62 L112 68 L107 70 L120 70 L115 68 L115 62" stroke="currentColor" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.5 }} />
+        <motion.path d="M104 46 L108 50 L104 54" stroke="hsl(var(--secondary))" strokeWidth="1.2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.05 }} />
+        <motion.path d="M111 54 L122 54" stroke="hsl(var(--secondary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.2 }} />
         {/* Keyboard */}
-        <motion.rect x="38" y="96" width="50" height="3" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.8 }} />
+        <motion.rect x="38" y="96" width="50" height="3" rx="1" stroke="currentColor" strokeWidth="1" opacity="0.4" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 0.55 }} />
         {/* Git branch */}
-        <motion.circle cx="15" cy="45" r="3" stroke="hsl(var(--primary))" strokeWidth="1.2" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 2 }} />
-        <motion.path d="M15 48 L15 55" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 2.1 }} />
+        <motion.circle cx="15" cy="45" r="3" stroke="hsl(var(--primary))" strokeWidth="1.2" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.4 }} />
+        <motion.path d="M15 48 L15 55" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.5 }} />
     </svg>
 );
 
@@ -142,20 +142,20 @@ const DeveloperCodingDoodle = ({ isActive }: { isActive: boolean }) => (
 const AIProductDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Robot head */}
-        <motion.path d="M45 35 L45 20 Q45 10 55 10 L85 10 Q95 10 95 20 L95 35" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8 }} />
-        <motion.rect x="40" y="35" width="60" height="50" rx="8" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8, delay: 0.3 }} />
+        <motion.path d="M45 35 L45 20 Q45 10 55 10 L85 10 Q95 10 95 20 L95 35" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.55 }} />
+        <motion.rect x="40" y="35" width="60" height="50" rx="8" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.55, delay: 0.2 }} />
         {/* Eyes */}
-        <motion.rect x="52" y="48" width="12" height="8" rx="2" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.8 }} />
-        <motion.rect x="76" y="48" width="12" height="8" rx="2" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.9 }} />
+        <motion.rect x="52" y="48" width="12" height="8" rx="2" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.55 }} />
+        <motion.rect x="76" y="48" width="12" height="8" rx="2" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 0.6 }} />
         {/* Mouth */}
-        <motion.path d="M58 68 L62 72 L66 68 L70 72 L74 68 L78 72 L82 68" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 1.1 }} />
+        <motion.path d="M58 68 L62 72 L66 68 L70 72 L74 68 L78 72 L82 68" stroke="hsl(var(--secondary))" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 0.75 }} />
         {/* Neural network */}
-        <motion.path d="M55 85 L55 100 M70 85 L70 105 M85 85 L85 100" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.3 }} />
+        <motion.path d="M55 85 L55 100 M70 85 L70 105 M85 85 L85 100" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.9 }} />
         {/* Nodes */}
-        <motion.circle cx="55" cy="105" r="4" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.7 }} />
-        <motion.circle cx="85" cy="105" r="4" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.9 }} />
+        <motion.circle cx="55" cy="105" r="4" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.2 }} />
+        <motion.circle cx="85" cy="105" r="4" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.35 }} />
         {/* Sparkle */}
-        <motion.path d="M18 8 L20 3 L22 8 L20 13 Z" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.5, scale: [0, 1.3, 1] } : {}} transition={{ delay: 2, duration: 0.5 }} />
+        <motion.path d="M18 8 L20 3 L22 8 L20 13 Z" fill="hsl(var(--primary))" opacity="0" initial={{ opacity: 0, scale: 0 }} animate={isActive ? { opacity: 0.5, scale: [0, 1.3, 1] } : {}} transition={{ delay: 1.4, duration: 0.4 }} />
     </svg>
 );
 
@@ -163,16 +163,16 @@ const AIProductDoodle = ({ isActive }: { isActive: boolean }) => (
 const ProblemSolvedDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Shield */}
-        <motion.path d="M70 10 L105 28 L105 68 Q105 100 70 118 Q35 100 35 68 L35 28 Z" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 1.2 }} />
+        <motion.path d="M70 10 L105 28 L105 68 Q105 100 70 118 Q35 100 35 68 L35 28 Z" stroke="currentColor" strokeWidth="2" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.85 }} />
         {/* Checkmark */}
-        <motion.path d="M50 62 L63 76 L90 46" stroke="hsl(var(--secondary))" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.8, delay: 1.2 }} />
+        <motion.path d="M50 62 L63 76 L90 46" stroke="hsl(var(--secondary))" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.55, delay: 0.85 }} />
         {/* Gears */}
-        <motion.circle cx="18" cy="22" r="10" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.6, delay: 1.5 }} />
-        <motion.circle cx="122" cy="28" r="7" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }} />
+        <motion.circle cx="18" cy="22" r="10" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 1.05 }} />
+        <motion.circle cx="122" cy="28" r="7" stroke="currentColor" strokeWidth="1.5" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 1.15 }} />
         {/* Nodes */}
-        <motion.circle cx="15" cy="100" r="5" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 2 }} />
-        <motion.path d="M20 100 L28 100" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 2.1 }} />
-        <motion.circle cx="33" cy="100" r="5" stroke="hsl(var(--secondary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 2.2 }} />
+        <motion.circle cx="15" cy="100" r="5" stroke="hsl(var(--primary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.4 }} />
+        <motion.path d="M20 100 L28 100" stroke="hsl(var(--primary))" strokeWidth="1" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.5 }} />
+        <motion.circle cx="33" cy="100" r="5" stroke="hsl(var(--secondary))" strokeWidth="1.5" initial={{ scale: 0 }} animate={isActive ? { scale: 1 } : {}} transition={{ delay: 1.55 }} />
     </svg>
 );
 
@@ -180,13 +180,13 @@ const ProblemSolvedDoodle = ({ isActive }: { isActive: boolean }) => (
 const BusinessGrowthDoodle = ({ isActive }: { isActive: boolean }) => (
     <svg viewBox="0 0 140 140" className="w-full h-full" fill="none">
         {/* Chart */}
-        <motion.path d="M20 115 L20 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5 }} />
-        <motion.path d="M20 115 L125 115" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 0.1 }} />
-        <motion.path d="M25 105 L37 100 L51 102 L65 88 L79 72 L93 55 L107 30" stroke="hsl(var(--secondary))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 1.2, delay: 1.3 }} />
-        <motion.path d="M103 38 L107 30 L113 36" stroke="hsl(var(--secondary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 2.3 }} />
+        <motion.path d="M20 115 L20 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35 }} />
+        <motion.path d="M20 115 L125 115" stroke="currentColor" strokeWidth="2" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 0.1 }} />
+        <motion.path d="M25 105 L37 100 L51 102 L65 88 L79 72 L93 55 L107 30" stroke="hsl(var(--secondary))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.85, delay: 0.9 }} />
+        <motion.path d="M103 38 L107 30 L113 36" stroke="hsl(var(--secondary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.2, delay: 1.6 }} />
         {/* Person */}
-        <motion.circle cx="118" cy="18" r="7" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.5, delay: 1.8 }} />
-        <motion.path d="M118 30 L108 20 M118 30 L128 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.4, delay: 2.2 }} />
+        <motion.circle cx="118" cy="18" r="7" stroke="currentColor" strokeWidth="1.8" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.35, delay: 1.25 }} />
+        <motion.path d="M118 30 L108 20 M118 30 L128 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" initial={{ pathLength: 0 }} animate={isActive ? { pathLength: 1 } : {}} transition={{ duration: 0.3, delay: 1.55 }} />
     </svg>
 );
 
@@ -209,7 +209,7 @@ export default function HeroStoryTimeline() {
         if (isInView) {
             const interval = setInterval(() => {
                 setActiveStep((prev) => (prev + 1) % storySteps.length);
-            }, 5000);
+            }, 3000);
             return () => clearInterval(interval);
         }
     }, [isInView]);
@@ -243,7 +243,7 @@ export default function HeroStoryTimeline() {
                     <motion.div
                         className="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-primary to-secondary"
                         animate={{ width: `${((activeStep) / (storySteps.length - 1)) * 100}%` }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
                     />
                     {/* Dots on line */}
                     {storySteps.map((_, index) => (
@@ -267,7 +267,7 @@ export default function HeroStoryTimeline() {
                             onClick={() => setActiveStep(index)}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.5 + index * 0.08 }}
+                            transition={{ delay: 0.3 + index * 0.05 }}
                         >
                             <div className={`relative w-20 h-20 xl:w-24 xl:h-24 rounded-2xl p-2 transition-all duration-500 flex items-center justify-center ${index === activeStep
                                 ? "text-primary bg-primary/5 ring-2 ring-primary/20 shadow-lg scale-110 opacity-100"
