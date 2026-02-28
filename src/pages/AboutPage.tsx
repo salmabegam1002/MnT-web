@@ -330,7 +330,7 @@ const VisionaryExperience = () => {
           <div className="relative w-full max-w-4xl flex flex-col items-center pb-6 md:pb-0">
             {/* Robot Image */}
             <motion.img
-              src="/public/aboutbg.png"
+              src="/aboutbg.png"
               alt="AI Core"
               className="w-[240px] md:w-[480px] mb-[-15px] md:mb-[-40px] drop-shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-10"
               style={{
