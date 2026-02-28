@@ -300,25 +300,37 @@ const VisionaryExperience = () => {
 
         {/* Content Layers: Centered and above the robot */}
         <div className="relative z-50 flex-1 flex flex-col items-center justify-center w-full max-w-4xl px-6 md:px-14 text-center pb-[30vh] md:pb-0">
-          {items.map((item, index) => {
-            const start = index / items.length;
-            const end = (index + 1) / items.length;
+          {AI_STRATEGIC_ITEMS.map((item, index) => {
+            const start = index / AI_STRATEGIC_ITEMS.length;
+            const end = (index + 1) / AI_STRATEGIC_ITEMS.length;
 
             // Only Opacity for fade transition
             // eslint-disable-next-line react-hooks/rules-of-hooks
             const opacity = useTransform(scrollYProgress, [start, start + 0.1, end - 0.1, end], [0, 1, 1, 0]);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const scale = useTransform(scrollYProgress, [start, start + 0.1, end - 0.1, end], [0.9, 1, 1, 0.9]);
 
             return (
               <motion.div
-                key={item.title}
-                style={{ opacity }}
+                key={item.id}
+                style={{ opacity, scale }}
                 className="absolute w-full px-6 flex flex-col items-center"
               >
-                <h2 className="text-[14vw] md:text-[8rem] font-display font-bold text-white mb-4 md:mb-8 tracking-tighter leading-none">
+                {/* Section Image */}
+                <div className="relative mb-6 md:mb-10 group">
+                  <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-20 h-20 md:w-32 md:h-32 object-contain relative z-10 filter drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]"
+                  />
+                </div>
+
+                <h2 className="text-[12vw] md:text-[6rem] font-display font-bold text-white mb-4 md:mb-6 tracking-tighter leading-none">
                   {item.title}
                 </h2>
                 <p className="text-base md:text-xl text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed">
-                  {item.text}
+                  {item.description}
                 </p>
               </motion.div>
             );
@@ -330,7 +342,7 @@ const VisionaryExperience = () => {
           <div className="relative w-full max-w-4xl flex flex-col items-center pb-6 md:pb-0">
             {/* Robot Image */}
             <motion.img
-              src="/aboutbg.png"
+              src={`${import.meta.env.BASE_URL}aboutbg.png`}
               alt="AI Core"
               className="w-[240px] md:w-[480px] mb-[-15px] md:mb-[-40px] drop-shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-10"
               style={{
