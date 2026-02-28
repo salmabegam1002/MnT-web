@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from "framer-motion";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -184,7 +184,7 @@ const WhoWeAre = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-16 md:py-18 overflow-hidden bg-slate-900 selection:bg-primary/20">
+    <section ref={ref} className="relative pt-16 pb-16 md:pt-18 md:pb-18 overflow-hidden bg-slate-900 selection:bg-primary/20">
       {/* Dark gradient theme layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0c2d48] to-slate-900" />
 
@@ -249,183 +249,104 @@ const WhoWeAre = () => {
   );
 };
 
-// 4. AI Character Experience (Interactive Grid)
-const AICharacterExperience = () => {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const selectedItem = AI_STRATEGIC_ITEMS.find(item => item.id === selectedId);
+// 4. Visionary Experience Section (Scroll Driven)
+const VisionaryExperience = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  const items = [
+    {
+      title: "Mission",
+      text: "To engineer intelligent digital foundations that empower enterprises to lead with architectural precision and operational excellence. We focus on building resilient systems that solve today's friction and anticipate tomorrow's opportunity."
+    },
+    {
+      title: "Vision",
+      text: "To be the global benchmark for systemic intelligence, where every line of code architected builds a more resilient and scalable future. We envision an enterprise landscape where AI is natively integrated into every architectural layer."
+    },
+    {
+      title: "Goals",
+      text: "Accelerate global AI adoption through localized engineering expertise and resilient enterprise infrastructure. We aim to deploy 10,000+ intelligent systems across the region by 2030."
+    },
+    {
+      title: "Values",
+      text: "Architectural Integrity, Radical Transparency, Engineering Precision, and Collaborative Growth define our core DNA. We believe that true intelligence is built on a foundation of trust."
+    }
+  ];
 
   return (
-    <section className="relative py-14 bg-slate-50">
-      <div className="container-custom">
-        <div className="max-w-3xl mb-8">
-          <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Strategic Foundation</span>
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-slate-900 tracking-tighter">
-            Architectural <span className="text-enterprise-gradient">Narrative</span>
-          </h2>
+    <section ref={containerRef} className="relative h-[300vh] md:h-[400vh] bg-[#0a0a0a]">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col items-center">
+        {/* Background Layer: Grid + Spotlight */}
+        <div className="absolute inset-0 bg-[#0a0a0a]">
+          {/* Grid Pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.4]"
+            style={{
+              backgroundImage: `
+                                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+                            `,
+              backgroundSize: '80px 80px'
+            }}
+          />
+          {/* Dark Vignette */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a] opacity-80" />
+          {/* Spotlight behind robot */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary opacity-[0.09] blur-[120px] rounded-full" />
         </div>
 
-        {/* Grid View */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-48 sm:gap-y-40 lg:gap-10 pt-48">
-          {AI_STRATEGIC_ITEMS.map((item) => (
-            <motion.div
-              key={item.id}
-              layoutId={`card-${item.id}`}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              onClick={() => setSelectedId(item.id)}
-              whileHover={{ y: -6 }}
-              className={`relative h-[300px] rounded-[3.5rem] cursor-pointer group bg-gradient-to-b ${item.color} shadow-lg hover:shadow-2xl transition-all duration-300`}
-            >
-              {/* Character Overlap - Positioned absolutely above the card */}
-              <div className="absolute inset-x-0 -top-60 h-[440px] pointer-events-none z-20 flex justify-center">
-                <motion.div className="relative w-full h-full flex justify-center">
-                  <motion.img
-                    layoutId={`image-${item.id}`}
-                    src={item.image}
-                    alt={item.title}
-                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="h-full w-auto object-contain filter drop-shadow-[0_40px_60px_rgba(0,0,0,0.8)] origin-bottom"
-                  />
-                </motion.div>
-              </div>
+        {/* Content Layers: Centered and above the robot */}
+        <div className="relative z-50 flex-1 flex flex-col items-center justify-center w-full max-w-4xl px-6 md:px-14 text-center pb-[30vh] md:pb-0">
+          {items.map((item, index) => {
+            const start = index / items.length;
+            const end = (index + 1) / items.length;
 
-              {/* Card Content Container - Compact and at the bottom */}
-              <div className="absolute inset-x-0 bottom-0 p-10 pb-12 space-y-4 z-30">
-                <motion.span
-                  layoutId={`label-${item.id}`}
-                  transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                  className="text-[10px] font-black text-white/30 tracking-[0.4em] block uppercase"
-                >
-                  {item.id}
-                </motion.span>
-                <div className="space-y-1">
-                  <motion.h3
-                    layoutId={`title-${item.id}`}
-                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    className="text-3xl font-display font-bold text-white tracking-widest uppercase"
-                  >
-                    {item.title}
-                  </motion.h3>
-                  <motion.p
-                    layoutId={`summary-${item.id}`}
-                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    className="text-white/40 text-[11px] font-medium leading-relaxed uppercase tracking-widest line-clamp-2"
-                  >
-                    {item.summary}
-                  </motion.p>
-                </div>
-              </div>
+            // Only Opacity for fade transition
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const opacity = useTransform(scrollYProgress, [start, start + 0.1, end - 0.1, end], [0, 1, 1, 0]);
 
-              {/* Interaction Hint */}
-              <div className="absolute top-8 right-8 z-30 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                  <ArrowRight className="w-4 h-4 text-white" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                key={item.title}
+                style={{ opacity }}
+                className="absolute w-full px-6 flex flex-col items-center"
+              >
+                <h2 className="text-[14vw] md:text-[8rem] font-display font-bold text-white mb-4 md:mb-8 tracking-tighter leading-none">
+                  {item.title}
+                </h2>
+                <p className="text-base md:text-xl text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed">
+                  {item.text}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Foreground Layer: Robot pinned to bottom */}
+        <div className="absolute inset-x-0 bottom-0 pointer-events-none z-10 flex flex-col items-center">
+          <div className="relative w-full max-w-4xl flex flex-col items-center pb-6 md:pb-0">
+            {/* Robot Image */}
+            <motion.img
+              src="/public/aboutbg.png"
+              alt="AI Core"
+              className="w-[240px] md:w-[480px] mb-[-15px] md:mb-[-40px] drop-shadow-[0_0_80px_rgba(255,255,255,0.15)] relative z-10"
+              style={{
+                filter: "drop-shadow(0 0 30px rgba(0,0,0,0.5))"
+              }}
+            />
+            {/* Stone Base CSS Alternative */}
+            <div className="w-[70%] md:w-[60%] h-10 md:h-20 relative">
+              {/* Stone Top */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#333] to-[#111] rounded-[50%] scale-y-[0.3] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-t border-white/10" />
+              {/* Stone Glow/Spotlight on top */}
+              <div className="absolute inset-0 bg-white opacity-[0.05] rounded-[50%] scale-y-[0.2] blur-md translate-y-[-10px]" />
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Expanded View Modal */}
-      <AnimatePresence>
-        {selectedId && selectedItem && (
-          <motion.div
-            key="modal-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedId(null)}
-              className="absolute inset-0 bg-slate-900/95 backdrop-blur-xl"
-            />
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className={`relative w-full max-w-6xl h-[85vh] md:h-[70vh] rounded-[3rem] bg-slate-900 overflow-hidden shadow-2xl flex flex-col md:flex-row z-10`}
-            >
-              {/* Decorative Glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(14,165,233,0.15),transparent_60%)] pointer-events-none" />
-
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedId(null)}
-                className="absolute top-8 right-8 z-50 p-4 rounded-full bg-white/5 hover:bg-white/10 transition-colors group"
-              >
-                <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
-              </button>
-
-              {/* Character Side */}
-              <div className="relative flex-1 h-[40%] md:h-full flex items-center justify-center pointer-events-none">
-                <motion.img
-                  src={selectedItem.image}
-                  alt={selectedItem.title}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ type: "spring", damping: 25, stiffness: 200, delay: 0.1 }}
-                  className="w-full h-[150%] object-contain drop-shadow-[0_0_80px_rgba(14,165,233,0.4)] z-10"
-                  style={{
-                    maskImage: 'radial-gradient(circle at center, black 50%, transparent 80%)',
-                    WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 80%)'
-                  }}
-                />
-              </div>
-
-              {/* Content Side */}
-              <div className="flex-1 p-8 md:p-24 flex flex-col justify-center relative z-10 overflow-y-auto">
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  className="space-y-8"
-                >
-                  <div className="space-y-4">
-                    <span className="text-primary font-bold tracking-[0.4em] uppercase text-xs block">
-                      {selectedItem.label}
-                    </span>
-                    <h2 className="text-4xl md:text-8xl font-display font-bold text-white tracking-tighter">
-                      {selectedItem.title}
-                    </h2>
-                  </div>
-
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{ delay: 0.1 }}
-                    className="text-lg md:text-2xl text-slate-400 font-medium leading-relaxed max-w-xl"
-                  >
-                    {selectedItem.description}
-                  </motion.p>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    <Link to="/contact" onClick={() => setSelectedId(null)}>
-                      <button className="flex items-center gap-4 text-white font-bold tracking-widest uppercase text-xs hover:gap-6 transition-all group">
-                        <span>Initiate Project</span>
-                        <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1" />
-                      </button>
-                    </Link>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
@@ -439,14 +360,14 @@ const AboutPage = () => {
       {/* 2. WHO WE ARE */}
       <WhoWeAre />
 
-      {/* 3. Strategic Foundation (AI Character Experience) */}
-      <AICharacterExperience />
+      {/* 3. Visionary Experience (Mission, Vision, Goals, Values) */}
+      <VisionaryExperience />
 
       {/* 4. Architectural Flow */}
       <ArchitecturalFlow />
 
       {/* 5. Founder’s Perspective (Founder & Visionary) */}
-      <section className="relative py-10 md:py-16 bg-white border-y border-slate-50">
+      <section className="relative py-14 md:py-32 bg-white border-y border-slate-50">
         <div className="container-custom">
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute top-0 left-0 text-[15vw] text-slate-100/50 leading-none select-none font-black italic -translate-x-12 -translate-y-12">“</div>

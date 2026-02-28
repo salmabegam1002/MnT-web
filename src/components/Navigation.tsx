@@ -33,8 +33,8 @@ const Navigation = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? "bg-white/70 backdrop-blur-md border-b border-border/20 shadow-premium"
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled || isMobileMenuOpen
+          ? "bg-white/80 backdrop-blur-md border-b border-border/10 shadow-premium"
           : "bg-transparent"
           }`}
       >
@@ -49,6 +49,7 @@ const Navigation = () => {
             </Link>
           </motion.div>
 
+          {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link, index) => (
               <motion.div
@@ -83,100 +84,78 @@ const Navigation = () => {
             </Link>
           </motion.div>
 
+          {/* Mobile Toggle */}
           <motion.button
-            className="lg:hidden relative z-10 p-2 text-foreground"
+            className="lg:hidden relative z-10 p-2 text-slate-800"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileTap={{ scale: 0.9 }}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
+
+        {/* Compact Dropdown Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute top-full left-0 right-0 bg-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-b-3xl border-t border-slate-100 overflow-hidden lg:hidden"
+            >
+              <div className="flex flex-col py-8 px-8 space-y-5">
+                {navLinks.map((link, index) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.03 }}
+                  >
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block text-xl font-bold tracking-tight transition-all ${location.pathname === link.href
+                        ? "text-primary translate-x-2"
+                        : "text-slate-800 hover:text-primary hover:translate-x-2"
+                        }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+
+                <div className="pt-4">
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-full py-4 bg-enterprise-gradient text-white rounded-xl flex items-center justify-center font-bold text-sm tracking-widest shadow-lg shadow-primary/20"
+                  >
+                    GET STARTED
+                  </Link>
+                </div>
+
+                <div className="pt-4 text-center">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 opacity-60">
+                    Magizh NexGen Technologies
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.nav>
 
+      {/* Backdrop for outside click */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] lg:hidden"
-          >
-            {/* Immersive Background */}
-            <div
-              className="absolute inset-0 bg-white/90 backdrop-blur-2xl"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-y-0 right-0 w-full md:max-w-md bg-white shadow-2xl flex flex-col pt-6 pb-12 px-8 overflow-y-auto"
-            >
-              {/* Branded Header */}
-              <div className="flex items-center justify-between mb-12">
-                <Link
-                  to="/"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center"
-                >
-                  <img src={logo} alt="MNT Future" className="h-8 w-auto" />
-                </Link>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors"
-                >
-                  <X size={20} />
-                </button>
-              </div>
-
-              {/* Navigation Links */}
-              <div className="flex flex-col gap-6 flex-grow">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 + 0.2, duration: 0.5 }}
-                    className="w-full"
-                  >
-                    <Link
-                      to={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block text-3xl font-display font-bold transition-all relative group ${location.pathname === link.href
-                        ? "text-primary translate-x-3"
-                        : "text-slate-800 hover:text-primary hover:translate-x-3"
-                        }`}
-                    >
-                      {link.name}
-                      <span className={`absolute -left-4 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-primary transition-opacity ${location.pathname === link.href ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`} />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Footer CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.05 + 0.3, duration: 0.5 }}
-                className="mt-auto pt-10"
-              >
-                <Link
-                  to="/contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-full py-5 bg-enterprise-gradient text-white rounded-2xl flex items-center justify-center font-bold text-sm tracking-widest shadow-xl shadow-primary/20"
-                >
-                  GET STARTED
-                </Link>
-                <p className="text-center text-slate-400 text-[10px] mt-6 font-bold uppercase tracking-widest opacity-60">
-                  Magizh NexGen Technologies
-                </p>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="fixed inset-0 bg-slate-900/10 backdrop-blur-sm z-[90] lg:hidden"
+          />
         )}
       </AnimatePresence>
     </>
