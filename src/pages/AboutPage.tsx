@@ -306,7 +306,7 @@ const VisionaryExperience = () => {
         </div>
 
         {/* Content Layers: Centered and above the robot */}
-        <div className="relative z-50 flex-1 flex flex-col items-center justify-center w-full max-w-4xl px-6 md:px-14 text-center pb-[30vh] md:pb-0">
+        <div className="relative z-50 flex-1 flex flex-col items-center justify-start w-full max-w-4xl px-6 md:px-14 text-center pt-[12vh] md:pt-[15vh]">
           {AI_STRATEGIC_ITEMS.map((item, index) => {
             const start = index / AI_STRATEGIC_ITEMS.length;
             const end = (index + 1) / AI_STRATEGIC_ITEMS.length;
