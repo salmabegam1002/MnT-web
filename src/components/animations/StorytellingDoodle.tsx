@@ -62,7 +62,7 @@ const StorytellingDoodle = ({ progress }: StorytellingDoodleProps) => {
                 </motion.svg>
 
                 {/* SCENE 5: AI & Success (Neural Mesh + Growth) */}
-                <motion.svg style={{ opacity: opacity5 }} viewBox="0 0 200 200" className="absolute inset-0 w-full h-full text-enterprise-gradient">
+                <motion.svg style={{ opacity: opacity5 }} viewBox="0 0 200 200" className="absolute inset-0 w-full h-full text-[#2095F1]">
                     {/* Neural Mesh in background */}
                     <g opacity="0.2">
                         {[...Array(5)].map((_, i) => (

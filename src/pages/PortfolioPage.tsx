@@ -129,7 +129,7 @@ const PortfolioHero = () => {
                         </span>
                         <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
                             Intelligence <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Engineered.</span> Results Delivered.
+                            <span className="text-[#2095F1]">Engineered.</span> Results Delivered.
                         </h1>
                         <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-2xl leading-relaxed mx-auto">
                             Explore how MnT is transforming enterprises through surgical AI implementations, high-stakes automation, and next-generation architectural protocols.
@@ -137,7 +137,7 @@ const PortfolioHero = () => {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-2">
                             <button
                                 onClick={() => document.getElementById('featured-work')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="w-full sm:w-auto px-10 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all"
+                                className="w-full sm:w-auto px-10 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all"
                             >
                                 VIEW CASE STUDIES
                             </button>
@@ -263,7 +263,7 @@ const PortfolioProjectsListing = () => {
                         </span>
                     </motion.div>
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
-                        Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Implementations</span>
+                        Featured <span className="text-[#2095F1]">Implementations</span>
                     </h2>
                 </div>
 
@@ -435,7 +435,7 @@ const PortfolioCTA = () => {
                 >
                     <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
                         Ready to Build Your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Success Story?</span>
+                        <span className="text-[#2095F1]">Success Story?</span>
                     </h2>
 
                     <p className="text-slate-400 text-lg md:text-xl mb-16 max-w-2xl mx-auto">
@@ -446,7 +446,7 @@ const PortfolioCTA = () => {
                         <motion.button
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.98 }}
-                            className="px-10 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group"
+                            className="px-10 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group"
                         >
                             START YOUR PROJECT
                             <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />

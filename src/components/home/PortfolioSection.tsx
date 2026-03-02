@@ -168,7 +168,7 @@ const PortfolioSection = () => {
                         className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-[1.2] tracking-tight"
                     >
                         Take a look at the latest <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Projects from MnT</span>
+                        <span className="text-[#2095F1]">Projects from MnT</span>
                     </motion.h2>
                 </div>
 
@@ -189,7 +189,7 @@ const PortfolioSection = () => {
                 >
                     <a
                         href="/portfolio"
-                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 group"
+                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#2095F1] text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 group"
                     >
                         See All Our Projects
                         <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />

@@ -265,7 +265,7 @@ const EcosystemSection = () => {
                                 whileInView={{ x: "0%" }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="absolute inset-0 bg-enterprise-gradient"
+                                className="absolute inset-0 bg-[#2095F1]"
                             />
                         </div>
                     </motion.div>

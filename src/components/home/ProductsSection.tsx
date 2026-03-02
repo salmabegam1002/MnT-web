@@ -62,7 +62,7 @@ const ProductsSection = () => {
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight">
                         Tailored Solutions for <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Every Business Need</span>
+                        <span className="text-[#2095F1]">Every Business Need</span>
                     </h2>
                 </div>
 
@@ -73,7 +73,7 @@ const ProductsSection = () => {
                             key={product.id}
                             onClick={() => handleTabClick(index)}
                             className={`px-8 py-3 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border whitespace-nowrap ${index === activeTab
-                                ? "bg-enterprise-gradient text-white border-transparent shadow-md shadow-blue-500/10 scale-105"
+                                ? "bg-[#2095F1] text-white border-transparent shadow-md shadow-blue-500/10 scale-105"
                                 : "bg-white text-slate-500 border-slate-200 hover:border-primary/30 hover:text-primary hover:bg-slate-50"
                                 }`}
                         >
@@ -116,7 +116,7 @@ const ProductsSection = () => {
                                 </div>
 
                                 <div className="pt-4 flex justify-center lg:justify-start">
-                                    <a href="/products" className="group relative px-5 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                    <a href="/products" className="group relative px-5 py-3 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                                         Explore Solutions
                                         {/* <div className="px-5 py-3 bg-transparent border border-slate-300 text-slate-600 font-bold rounded-full hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300">
                                             <ArrowRight className="w-4 h-4 transition-transform" />

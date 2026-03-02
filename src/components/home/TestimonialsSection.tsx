@@ -59,7 +59,7 @@ const TestimonialCard = ({ t, index, isBackground = false }: { t: any, index: nu
                         <img src={t.image} alt={t.author} className="w-full h-full object-cover" />
                     </div>
                     {!isBackground && (
-                        <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-enterprise-gradient rounded-full flex items-center justify-center border-2 border-white">
+                        <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#2095F1] rounded-full flex items-center justify-center border-2 border-white">
                             <Quote className="w-2.5 h-2.5 text-white fill-current" />
                         </div>
                     )}
@@ -76,7 +76,7 @@ const TestimonialCard = ({ t, index, isBackground = false }: { t: any, index: nu
                     <span key={i}>
                         {part}
                         {i < arr.length - 1 && (
-                            <span className="relative inline-block px-2 py-0.5 mx-1 rounded-md bg-enterprise-gradient/5 text-slate-900 font-semibold border border-primary/10 group-hover:border-primary/20 transition-colors">
+                            <span className="relative inline-block px-2 py-0.5 mx-1 rounded-md bg-[#2095F1]/5 text-slate-900 font-semibold border border-primary/10 group-hover:border-primary/20 transition-colors">
                                 {t.highlight}
                             </span>
                         )}
@@ -129,7 +129,7 @@ const CenterTrustBadge = () => {
                     from <span className="text-slate-900">250K+ reviews</span>
                 </p>
 
-                <button className="px-6 py-3 rounded-full bg-enterprise-gradient text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto group/btn">
+                <button className="px-6 py-3 rounded-full bg-[#2095F1] text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto group/btn">
                     View all testimonials
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -181,7 +181,7 @@ const TestimonialsSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight"
                     >
-                        Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Industry Leaders</span>
+                        Trusted by <span className="text-[#2095F1]">Industry Leaders</span>
                     </motion.h2>
                 </div>
 

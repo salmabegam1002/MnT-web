@@ -112,14 +112,7 @@ const GoogleLogo = () => (
 );
 
 const ClutchLogo = () => (
-    <svg viewBox="0 0 300 100" className="w-24 h-12" xmlns="http://www.w3.org/2000/svg">
-        <path d="M47.7,69.5c-4,0-7.7-1.4-10.4-4.1c-2.7-2.7-4.1-6.4-4.1-10.4c0-4,1.4-7.7,4.1-10.4c2.7-2.7,6.4-4.1,10.4-4.1c4,0,7.7,1.4,10.4,4.1c2.7,2.7,4.1,6.4,4.1,10.4c0,4-1.4,7.7-4.1,10.4C55.4,68.1,51.7,69.5,47.7,69.5z M47.7,31.6c-13,0-23.4,10.4-23.4,23.4s10.4,23.4,23.4,23.4s23.4-10.4,23.4-23.4S60.7,31.6,47.7,31.6z" fill="#ff4400" />
-        <path d="M96.3,27.3v50.5h-9v-5.4c-3.1,3.8-7.9,6.1-13.4,6.1c-9.6,0-17.4-7.8-17.4-17.4V27.3h9v33c0,4.6,3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4V27.3H96.3z" fill="#1b1d1f" />
-        <path d="M127.3,77.8c-1.3,0-2.3-1.1-2.3-2.3V44.4h-6v-7.8h6v-9.3h9v9.3h7.8V44.4h-7.8v29.3C134.3,75.9,131.2,77.8,127.3,77.8z" fill="#1b1d1f" />
-        <path d="M174.5,56.1c0,11.3-9.1,20.4-20.4,20.4s-20.4-9.1-20.4-20.4s9.1-20.4,20.4-20.4c5.4,0,10.3,2.1,13.9,5.5l-6.4,6.4c-2-1.9-4.7-3.1-7.5-3.1c-6.3,0-11.4,5.1-11.4,11.4s5.1,11.4,11.4,11.4c2.8,0,5.5-1.1,7.5-3.1l6.4,6.4C171.6,63.9,174.5,60.3,174.5,56.1z" fill="#1b1d1f" />
-        <path d="M211,27.3v50.5h-9V27.3H211z" fill="#1b1d1f" />
-        <path d="M246.3,31.6v46.1h-9v-5.4c-3.1,3.8-7.9,6.1-13.4,6.1c-9.6,0-17.4-7.8-17.4-17.4V31.6h9V65c0,4.6,3.8,8.4,8.4,8.4c4.6,0,8.4-3.8,8.4-8.4V31.6H246.3z" fill="#1b1d1f" />
-    </svg>
+    <img src="/clutch.png" alt="Clutch" className="w-24 h-auto object-contain" />
 );
 
 const ScrollStyles = () => (
@@ -266,7 +259,7 @@ const TestimonialsPage = () => {
                     transition={{ delay: 0.1 }}
                     className="text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-display font-bold text-[#111111] mb-6 tracking-tight leading-[1.1]"
                 >
-                    What our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">users say</span>
+                    What our <span className="text-[#2095F1]">users say</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -332,7 +325,7 @@ const TestimonialsPage = () => {
                     >
                         <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-10 leading-[1.1] tracking-tight">
                             Let Your Success <br />
-                            Story <span className="text-enterprise-gradient bg-clip-text text-transparent">Begin Here</span>
+                            Story <span className="text-[#2095F1]">Begin Here</span>
                         </h2>
 
                         <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium">
@@ -340,7 +333,7 @@ const TestimonialsPage = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8">
-                            <Link to="/contact" className="px-12 py-6 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 hover:-translate-y-1 transition-all w-full sm:w-auto">
+                            <Link to="/contact" className="px-12 py-6 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 hover:-translate-y-1 transition-all w-full sm:w-auto">
                                 SCHEDULE CONSULTATION
                             </Link>
                         </div>

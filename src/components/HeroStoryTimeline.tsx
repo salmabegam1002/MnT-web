@@ -241,7 +241,7 @@ export default function HeroStoryTimeline() {
                 <div className="relative h-[2px] mb-8 w-full max-w-5xl mx-auto">
                     <div className="absolute inset-0 bg-slate-200 rounded-full" />
                     <motion.div
-                        className="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                        className="absolute top-0 left-0 h-full rounded-full bg-[#2095F1]"
                         animate={{ width: `${((activeStep) / (storySteps.length - 1)) * 100}%` }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
                     />
@@ -267,7 +267,7 @@ export default function HeroStoryTimeline() {
                             onClick={() => setActiveStep(index)}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.2 + index * 0.03 }}
+                            transition={{ delay: 0.1 + index * 0.03 }}
                         >
                             <div className={`relative w-20 h-20 xl:w-24 xl:h-24 rounded-2xl p-2 transition-all duration-500 flex items-center justify-center ${index === activeStep
                                 ? "text-primary bg-primary/5 ring-2 ring-primary/20 shadow-lg scale-110 opacity-100"

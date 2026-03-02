@@ -228,7 +228,7 @@ const PrivacyPolicyPage = () => {
         <div className="container-custom relative z-10 text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight">
             Have questions about our <br />
-            <span className="text-enterprise-gradient italic">Data Governance?</span>
+            <span className="text-[#2095F1] italic">Data Governance?</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
             Our legal compliance team is ready to provide clarity on our architectural protocols and privacy safeguards.

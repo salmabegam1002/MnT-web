@@ -129,7 +129,7 @@ const Navigation = () => {
                   <Link
                     to="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full py-4 bg-enterprise-gradient text-white rounded-xl flex items-center justify-center font-bold text-sm tracking-widest shadow-lg shadow-primary/20"
+                    className="w-full py-4 bg-[#2095F1] text-white rounded-xl flex items-center justify-center font-bold text-sm tracking-widest shadow-lg shadow-primary/20"
                   >
                     GET STARTED
                   </Link>

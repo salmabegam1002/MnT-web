@@ -87,7 +87,7 @@ const HeroSection = () => {
         <motion.div style={{ y: textY }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} className="max-w-4xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-6 block">MnT Future</span>
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-8">Lets Build Future <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Intelligence Together</span></h2>
+            <h2 className="text-5xl md:text-7xl font-display font-bold mb-8">Lets Build Future <br /> <span className="text-[#2095F1]">Intelligence Together</span></h2>
             <p className="text-slate-400 text-lg">A journey through the architectural layers of digital transformation</p>
           </div>
           <motion.div
@@ -97,7 +97,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <Link to="/contact">
-              <button className="px-7 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">
+              <button className="px-7 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">
                 Start Your Journey
               </button>
             </Link>
@@ -222,7 +222,7 @@ const WhoWeAre = () => {
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-xs block">WHO WE ARE</span>
               <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-[1.1] tracking-tighter">
                 Engineering Intelligent
-                <span className="text-transparent bg-clip-text bg-enterprise-gradient"> Ecosystems</span> for Enterprise Growth
+                <span className="text-[#2095F1]"> Ecosystems</span> for Enterprise Growth
               </h2>
             </div>
 
@@ -391,7 +391,7 @@ const AboutPage = () => {
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute top-0 left-0 text-[15vw] text-slate-100/50 leading-none select-none font-black italic -translate-x-12 -translate-y-12">“</div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative z-10 text-center space-y-12 px-8">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 leading-[1.3] italic">“True digital transformation doesn’t happen at the surface. It’s won in the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">architectural foundation, where logic meets vision </span>to create something truly unshakeable.”</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 leading-[1.3] italic">“True digital transformation doesn’t happen at the surface. It’s won in the <span className="text-[#2095F1]">architectural foundation, where logic meets vision </span>to create something truly unshakeable.”</h2>
               <div className="space-y-4">
                 <div className="w-12 h-0.5 bg-primary mx-auto" />
                 <div className="text-slate-900 font-bold tracking-widest uppercase text-sm">Udhayaseelan Renganathan</div>
@@ -408,9 +408,9 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.2),transparent_70%)]" />
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-16">
-            <h2 className="text-4xl md:text-7xl font-display font-bold text-white tracking-tighter leading-tight">Let’s Engineer the <br /> <span className="text-enterprise-gradient">Future</span> Together.</h2>
+            <h2 className="text-4xl md:text-7xl font-display font-bold text-white tracking-tighter leading-tight">Let’s Engineer the <br /> <span className="text-[#2095F1]">Future</span> Together.</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/contact#contact-form" className="px-5 py-4 bg-enterprise-gradient text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">BOOK A STRATEGY CALL</Link>
+              <Link to="/contact#contact-form" className="px-5 py-4 bg-[#2095F1] text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">BOOK A STRATEGY CALL</Link>
               <Link to="/services" className="px-5 py-3 bg-transparent border border-slate-300 text-slate-300 font-bold rounded-full hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300">EXPLORE SERVICES</Link>
             </div>
           </motion.div>

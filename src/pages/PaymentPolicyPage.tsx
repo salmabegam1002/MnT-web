@@ -169,7 +169,7 @@ const PaymentPolicyPage = () => {
         <div className="container-custom relative z-10 text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight">
             Seamless <br />
-            <span className="text-enterprise-gradient">Transactional Engineering</span>
+            <span className="text-[#2095F1]">Transactional Engineering</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
             Our payment protocols prioritize security, efficiency, and full architectural transparency.
@@ -177,7 +177,7 @@ const PaymentPolicyPage = () => {
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
               href="/contact"
-              className="px-5 py-4 bg-enterprise-gradient text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3"
+              className="px-5 py-4 bg-[#2095F1] text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3"
             >
               Contact Support
             </a>

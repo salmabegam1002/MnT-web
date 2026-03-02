@@ -29,7 +29,7 @@ const VideoSection = () => {
                             className="text-4xl md:text-5xl font-display font-bold leading-tight text-white mb-8"
                         >
                             See how we define the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">future of enterprise</span>
+                            <span className="text-[#2095F1]">future of enterprise</span>
                         </motion.h2>
 
                         <p className="text-xl text-slate-400 leading-relaxed mb-12 max-w-lg">
@@ -41,7 +41,7 @@ const VideoSection = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="group relative px-5 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                            className="group relative px-5 py-3 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                             onClick={() => window.location.href = "/contact"}
                         >
                             Read Success Stories

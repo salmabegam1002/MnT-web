@@ -35,7 +35,7 @@ const BlogsSection = () => {
                             Knowledge Base
                         </motion.span>
                         <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900">
-                            Latest from the <span className="text-enterprise-gradient bg-clip-text text-transparent italic">Lab.</span>
+                            Latest from the <span className="text-[#2095F1] italic">Lab.</span>
                         </h2>
                     </div>
                     <motion.button

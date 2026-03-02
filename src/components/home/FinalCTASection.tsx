@@ -30,7 +30,7 @@ const FinalCTASection = () => {
                         <motion.button
                             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(14, 165, 233, 0.4)" }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-5 py-4 bg-enterprise-gradient text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3"
+                            className="px-5 py-4 bg-[#2095F1] text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3"
                             onClick={() => window.location.href = "/contact"}
                         >
                             Start Collaboration
@@ -46,7 +46,7 @@ const FinalCTASection = () => {
             </div>
 
             {/* Decorative architectural line */}
-            <div className="absolute bottom-0 right-0 w-1/3 h-[2px] bg-enterprise-gradient opacity-50" />
+            <div className="absolute bottom-0 right-0 w-1/3 h-[2px] bg-[#2095F1] opacity-50" />
         </section>
     );
 };

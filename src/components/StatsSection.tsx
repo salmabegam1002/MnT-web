@@ -48,7 +48,7 @@ const StatItem = ({ value, suffix, label, delay }: StatItemProps) => {
           {displayValue}
           <span className="text-primary">{suffix}</span>
         </div>
-        <div className="h-[2px] w-12 bg-enterprise-gradient mb-4" />
+        <div className="h-[2px] w-12 bg-[#2095F1] mb-4" />
         <p className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400">
           {label}
         </p>

@@ -89,7 +89,7 @@ const PackagesSection = () => {
           <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-slate-400 block mb-4">Pricing & Investment</span>
           <h2 className="text-6xl md:text-8xl font-display font-bold text-slate-900 leading-[0.8] mb-10">
             Engineered for <br />
-            <span className="text-enterprise-gradient bg-clip-text text-transparent italic">Scale</span>
+            <span className="text-[#2095F1] italic">Scale</span>
           </h2>
           <p className="text-xl text-slate-500 max-w-xl">
             Predictable investment plans designed for enterprises at every stage
@@ -118,7 +118,7 @@ const PackagesSection = () => {
                   className={`relative h-full enterprise-block md:p-12 border-slate-200/60 bg-white/70 backdrop-blur-md overflow-hidden flex flex-col`}
                 >
                   {isPopular && (
-                    <div className="absolute top-0 left-0 w-full h-1.5 bg-enterprise-gradient" />
+                    <div className="absolute top-0 left-0 w-full h-1.5 bg-[#2095F1]" />
                   )}
 
                   <div className="relative z-10 flex flex-col h-full">

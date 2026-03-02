@@ -78,7 +78,7 @@ const MagneticButton = ({
         >
             {/* Background Gradient */}
             <motion.div
-                className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                className="absolute inset-0 w-full h-full rounded-full bg-[#2095F1]"
                 animate={{
                     scale: isHovered ? 1.05 : 1,
                 }}
@@ -87,7 +87,7 @@ const MagneticButton = ({
 
             {/* Glow Effect */}
             <motion.div
-                className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-primary to-secondary blur-xl opacity-0"
+                className="absolute inset-0 w-full h-full rounded-full bg-[#2095F1] blur-xl opacity-0"
                 animate={{
                     opacity: isHovered ? 0.6 : 0,
                 }}

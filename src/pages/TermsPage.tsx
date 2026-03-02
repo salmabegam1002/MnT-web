@@ -162,7 +162,7 @@ const TermsPage = () => {
         <div className="container-custom relative z-10 text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight">
             Ready to initiate a <br />
-            <span className="text-enterprise-gradient italic">Collaborative Partnership?</span>
+            <span className="text-[#2095F1] italic">Collaborative Partnership?</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
             Our engagement models are designed for long-term scalability and architectural integrity.

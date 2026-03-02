@@ -101,7 +101,7 @@ linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
             className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-[1.1] mb-6 max-w-5xl mx-auto"
           >
             Transform Your Ideas Into{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-[#2095F1]">
               Digital Reality
             </span>
           </motion.h1>
@@ -125,11 +125,11 @@ linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
             className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-0"
           >
             <Link to="/contact">
-              <button className="group relative px-5 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              <button className="group relative px-5 py-3 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(32,149,241,0.39)] hover:shadow-[0_6px_20px_rgba(32,149,241,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
                   Start Your Journey <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-[#2095F1] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </Link>
 

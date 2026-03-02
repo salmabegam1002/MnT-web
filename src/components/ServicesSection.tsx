@@ -119,7 +119,7 @@ const ServiceItem = ({ service, index, isInView }: { service: typeof services[0]
                 transition={{ duration: 0.2 }}
                 className={`${isLeft ? "mr-auto" : "ml-auto"}`}
               >
-                <Link to={`/services/${service.id}`} className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white text-[10px] font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300">
+                <Link to={`/services/${service.id}`} className="inline-flex items-center gap-2 px-4 py-2 bg-[#2095F1] text-white text-[10px] font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300">
                   Read More <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -208,7 +208,7 @@ const ServicesSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.05] mb-6"
           >
             Intelligent Solutions <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Built for the Future</span>
+            <span className="text-[#2095F1]">Built for the Future</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -210,7 +210,7 @@ const IndustriesSection = () => {
             >
               <h2 className="text-6xl md:text-8xl font-display font-bold text-slate-900 leading-[0.8] mb-12">
                 Unified <br />
-                <span className="text-enterprise-gradient bg-clip-text text-transparent">Ecosystems</span>
+                <span className="text-[#2095F1]">Ecosystems</span>
               </h2>
               <p className="text-xl text-slate-500 leading-relaxed max-w-md">
                 We engineer bespoke intelligence for the world's most critical industries,
@@ -236,7 +236,7 @@ const IndustriesSection = () => {
                   {i === activeIndex && (
                     <motion.div
                       layoutId="active-line"
-                      className="h-[1px] bg-enterprise-gradient w-48 mt-2"
+                      className="h-[1px] bg-[#2095F1] w-48 mt-2"
                     />
                   )}
                 </motion.button>

@@ -40,7 +40,7 @@
     --radius: 0.5rem;
 
     /* Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(215, 100%, 45%) 0%, hsl(175, 100%, 35%) 100%);
+    --gradient-primary: #2095F1;
     --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
 
     --font-display: 'Space Grotesk', sans-serif;
@@ -100,13 +100,11 @@
 
   /* Premium Gradient Text */
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    color: #2095F1;
   }
 
   .text-enterprise-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #0ea5e9 0%, #2dd4bf 100%);
+    color: #2095F1;
   }
 
   /* Subtle Surface Layer */
@@ -124,8 +122,8 @@
   /* Magnetic Button Refined */
   .magnetic-btn {
     @apply relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-semibold transition-all duration-500 ease-out rounded-full text-white;
-    background: var(--gradient-primary);
-    box-shadow: 0 10px 20px -10px hsla(215, 100%, 50%, 0.3);
+    background: #2095F1;
+    box-shadow: 0 10px 20px -10px rgba(32, 149, 241, 0.3);
   }
 
   .magnetic-btn:hover {
@@ -423,8 +421,8 @@ html {
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #fff;
-  background: linear-gradient(135deg, hsl(215, 100%, 45%) 0%, hsl(175, 100%, 35%) 100%);
-  box-shadow: 0 6px 20px -6px rgba(14, 165, 233, 0.35);
+  background: #2095F1;
+  box-shadow: 0 6px 20px -6px rgba(32, 149, 241, 0.35);
   overflow: hidden;
   border: none;
   cursor: pointer;
@@ -503,7 +501,7 @@ a:hover .contact-info-glow {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #0ea5e9, #2dd4bf, transparent);
+  background: linear-gradient(90deg, transparent, #2095F1, #2095F1, transparent);
   opacity: 0.12;
   animation: contact-scanline 6s ease-in-out infinite;
 }
@@ -554,14 +552,14 @@ a:hover .contact-info-glow {
 .contact-wave-1 {
   top: -60%;
   left: -50%;
-  background: linear-gradient(135deg, #0ea5e9, #2dd4bf);
+  background: #2095F1;
   animation: contact-wave 20s linear infinite;
 }
 
 .contact-wave-2 {
   top: -55%;
   left: -45%;
-  background: linear-gradient(225deg, #2dd4bf, #0ea5e9);
+  background: #2095F1;
   animation: contact-wave 25s linear infinite reverse;
 }
 

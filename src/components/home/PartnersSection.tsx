@@ -56,7 +56,7 @@ const PartnersSection = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-[24px] font-bold uppercase tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2 block"
+                        className="text-[24px] font-bold uppercase tracking-[0.3em] text-[#2095F1] mb-2 block"
                     >
                         Trusted by Industry Leaders
                     </motion.span>

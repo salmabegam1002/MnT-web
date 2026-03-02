@@ -54,7 +54,7 @@ const ScrollProgress = ({
         <>
             {/* Progress Bar */}
             <motion.div
-                className={`fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary z-50 origin-left ${className}`}
+                className={`fixed top-0 left-0 right-0 h-1 bg-[#2095F1] z-50 origin-left ${className}`}
                 style={{
                     scaleX: scrollProgress / 100,
                 }}
@@ -76,8 +76,8 @@ const ScrollProgress = ({
                             {/* Dot */}
                             <motion.div
                                 className={`w-3 h-3 rounded-full border-2 transition-colors ${activeSection === index
-                                        ? "border-primary bg-primary"
-                                        : "border-muted-foreground/30 bg-transparent"
+                                    ? "border-primary bg-primary"
+                                    : "border-muted-foreground/30 bg-transparent"
                                     }`}
                                 animate={{
                                     scale: activeSection === index ? 1.2 : 1,

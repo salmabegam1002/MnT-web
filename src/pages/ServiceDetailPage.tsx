@@ -94,7 +94,7 @@ const ServiceDetailPage = () => {
                             </p>
                             <div className="flex flex-wrap gap-6">
                                 <Link to="/contact">
-                                    <button className="px-10 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all">
+                                    <button className="px-10 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all">
                                         SCHEDULE CONSULTATION
                                     </button>
                                 </Link>
@@ -203,7 +203,7 @@ const ServiceDetailPage = () => {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
                         <div className="max-w-2xl">
                             <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block">FRAMEWORK</span>
-                            <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight">What We <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Deliver</span> </h2>
+                            <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight">What We <span className="text-[#2095F1]">Deliver</span> </h2>
                         </div>
                     </div>
 
@@ -245,7 +245,7 @@ const ServiceDetailPage = () => {
                                 transition={{ delay: i * 0.1 }}
                                 className="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/40 text-center relative overflow-hidden group"
                             >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                                <div className="absolute top-0 left-0 w-full h-1 bg-[#2095F1] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                                 <h3 className="text-5xl font-display font-bold text-primary mb-2">
                                     {benefit.metric}
                                 </h3>
@@ -273,7 +273,7 @@ const ServiceDetailPage = () => {
                                     className="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 group"
                                 >
                                     <div className="aspect-video bg-slate-100 flex items-center justify-center relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-enterprise-gradient opacity-5 group-hover:opacity-10 transition-opacity" />
+                                        <div className="absolute inset-0 bg-[#2095F1] opacity-5 group-hover:opacity-10 transition-opacity" />
                                         <BarChart3 className="w-12 h-12 text-slate-300 group-hover:scale-110 transition-transform" />
                                     </div>
                                     <div className="p-8">
@@ -368,7 +368,7 @@ const ServiceDetailPage = () => {
                     >
                         <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
                             Ready to Transform Your <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-secondary">
+                            <span className="text-[#2095F1]">
                                 {data.name}?
                             </span>
                         </h2>
@@ -377,7 +377,7 @@ const ServiceDetailPage = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <Link to="/contact">
-                                <button className="px-12 py-6 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
+                                <button className="px-12 py-6 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
                                     TALK TO AN EXPERT
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>

@@ -81,7 +81,7 @@ const PageHero = ({
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className={`inline-block ${!centered ? "mr-4" : ""} ${titleHighlight && word.toLowerCase() === titleHighlight.toLowerCase() ? "text-enterprise-gradient bg-clip-text text-transparent" : ""}`}
+                  className={`inline-block ${!centered ? "mr-4" : ""} ${titleHighlight && word.toLowerCase() === titleHighlight.toLowerCase() ? "text-[#2095F1]" : ""}`}
                 >
                   {word}
                 </motion.span>

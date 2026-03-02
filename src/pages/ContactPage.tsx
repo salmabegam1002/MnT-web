@@ -48,7 +48,7 @@ const AnimatedGrid = () => (
     <div
       className="absolute inset-0 opacity-[0.04]"
       style={{
-        backgroundImage: `linear-gradient(#0ea5e9 0.5px, transparent 0.5px), linear-gradient(90deg, #0ea5e9 0.5px, transparent 0.5px)`,
+        backgroundImage: `linear-gradient(#2095F1 0.5px, transparent 0.5px), linear-gradient(90deg, #2095F1 0.5px, transparent 0.5px)`,
         backgroundSize: "80px 80px",
       }}
     />
@@ -273,7 +273,7 @@ const ContactPage = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.05] tracking-tight mb-5"
           >
             Let's Build{" "}
-            <span className="text-transparent bg-clip-text bg-enterprise-gradient">
+            <span className="text-[#2095F1]">
               Intelligence
             </span>{" "}
             Together
@@ -305,7 +305,7 @@ const ContactPage = () => {
               <FadeUp>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 leading-tight">
                   Start Your{" "}
-                  <span className="text-transparent bg-clip-text bg-enterprise-gradient">
+                  <span className="text-[#2095F1]">
                     AI Journey
                   </span>
                 </h2>
@@ -570,7 +570,7 @@ const ContactPage = () => {
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900">
               How We{" "}
-              <span className="text-transparent bg-clip-text bg-enterprise-gradient italic">
+              <span className="text-[#2095F1] italic">
                 Engage
               </span>
             </h2>
@@ -580,7 +580,7 @@ const ContactPage = () => {
       {/* Connecting line (desktop) */}
       {/* <div className="hidden md:block absolute top-16 left-[16.66%] right-[16.66%] h-[1px] z-0">
               <motion.div
-                className="h-full bg-enterprise-gradient origin-left"
+                className="h-full bg-[#2095F1] origin-left"
                 initial={{ scaleX: 0 }}
                 animate={processInView ? { scaleX: 1 } : {}}
                 transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
@@ -596,7 +596,7 @@ const ContactPage = () => {
 
       {/* Step dot */}
       {/* <div className="relative mx-auto mb-8 w-10 h-10 rounded-full bg-white border-2 border-primary/30 flex items-center justify-center shadow-sm">
-                  <div className="w-3 h-3 rounded-full bg-enterprise-gradient" />
+                  <div className="w-3 h-3 rounded-full bg-[#2095F1]" />
                 </div>
 
                 <h3 className="relative text-lg font-display font-bold text-slate-900 mb-3">
@@ -636,7 +636,7 @@ const ContactPage = () => {
                 className="w-full"
               />
               {/* Gradient accent bar */}
-              <div className="h-1.5 bg-enterprise-gradient" />
+              <div className="h-1.5 bg-[#2095F1]" />
             </div>
           </FadeUp>
         </div>
@@ -668,7 +668,7 @@ const ContactPage = () => {
           <FadeUp>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
               Ready to Architect the{" "}
-              <span className="text-transparent bg-clip-text bg-enterprise-gradient italic">
+              <span className="text-[#2095F1] italic">
                 Future
               </span>
               ?

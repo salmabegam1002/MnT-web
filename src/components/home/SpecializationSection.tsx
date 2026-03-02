@@ -51,7 +51,7 @@ const SpecializationSection = () => {
                             className="text-4xl md:text-5xl font-display font-medium leading-tight text-slate-900 mb-12"
                         >
                             Engineering trust at the <br />
-                            <span className="text-enterprise-gradient bg-clip-text text-transparent italic">intersection of AI and Art.</span>
+                            <span className="text-[#2095F1] italic">intersection of AI and Art.</span>
                         </motion.h2>
 
                         <div className="space-y-12">
@@ -108,7 +108,7 @@ const SpecializationSection = () => {
                                 whileHover={{ scale: 1.1 }}
                                 className="relative z-10 w-32 h-32 rounded-full bg-white shadow-huge flex items-center justify-center border border-slate-100/50 backdrop-blur-sm"
                             >
-                                <div className="w-16 h-16 rounded-full bg-enterprise-gradient opacity-[0.1] absolute animate-ping" />
+                                <div className="w-16 h-16 rounded-full bg-[#2095F1] opacity-[0.1] absolute animate-ping" />
                                 <Cpu className="w-10 h-10 text-primary" />
                             </motion.div>
                         </div>

@@ -158,7 +158,7 @@ const ServicesHero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.05] mb-8 max-w-5xl"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">AI-Powered</span> <br />
+            <span className="text-[#2095F1]">AI-Powered</span> <br />
             Digital Solutions
           </motion.h1>
 
@@ -179,7 +179,7 @@ const ServicesHero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <Link to="/contact">
-              <button className="px-5 py-4 bg-enterprise-gradient text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">
+              <button className="px-5 py-4 bg-[#2095F1] text-white rounded-full font-bold text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3">
                 Start Your Journey
                 <ArrowUpRight className="w-4 h-4" />
               </button>
@@ -213,7 +213,7 @@ const ProcessWorkflow = () => {
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-6 block">Our Delivery Model</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">How We Deploy <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Intelligence</span></h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">How We Deploy <br /> <span className="text-[#2095F1]">Intelligence</span></h2>
           <p className="text-slate-400 text-lg">We use a proprietary four-phase framework to ensure every AI implementation is stable, scalable, and secure.</p>
         </div>
 
@@ -341,7 +341,7 @@ const IndustryImpact = () => {
             >
               <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2 block">The MnT Advantage</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Impact.</span> <br />
+                Real <span className="text-[#2095F1]">Impact.</span> <br />
                 Measured.
                 <motion.div
                   initial={{ width: 0 }}
@@ -484,7 +484,7 @@ const MigratedServicesExplorer = () => {
         >
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-6 block">Our Services</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-8 leading-tight">
-            Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Intelligence</span> Solutions
+            Digital <span className="text-[#2095F1]">Intelligence</span> Solutions
           </h2>
           <p className="text-slate-500 text-lg">
             Explore how our specialized AI verticals integrate to form a cohesive digital strategy for your enterprise.
@@ -640,7 +640,7 @@ const ServicesPage = () => {
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 leading-tight">
               Ready to Deploy Your <br />
               <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-secondary relative z-10">
+                <span className="text-[#2095F1] relative z-10">
                   AI Workforce?
                 </span>
                 <div className="absolute -inset-4 bg-primary/20 blur-2xl -z-10 rounded-full animate-pulse" />
@@ -655,7 +655,7 @@ const ServicesPage = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-10 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group relative overflow-hidden"
+                className="px-10 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 SCHEDULE CONSULTATION

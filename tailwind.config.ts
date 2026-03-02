@@ -75,7 +75,7 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "enterprise-gradient": "linear-gradient(135deg, hsl(215, 100%, 45%) 0%, hsl(175, 100%, 35%) 100%)",
+        "enterprise-gradient": "linear-gradient(to right, #2095F1, #2095F1)",
         "soft-mesh": "radial-gradient(at 0% 0%, hsla(215, 100%, 50%, 0.05) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(175, 100%, 50%, 0.05) 0, transparent 50%)",
       },
       keyframes: {

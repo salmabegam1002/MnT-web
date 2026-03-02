@@ -221,7 +221,7 @@ const ProductsHero = () => {
             </span>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
               Intelligent Suite's<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Products Built</span> for Scale
+              <span className="text-[#2095F1]">Products Built</span> for Scale
             </h1>
             <p className="text-xl text-slate-500 mb-6 max-w-2xl leading-relaxed mx-auto">
               MnT's suite of specialized AI products forms a unified platform for enterprise growth.
@@ -229,7 +229,7 @@ const ProductsHero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-2">
               <button
                 onClick={() => document.getElementById('product-explorer')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto px-8 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all"
+                className="w-full sm:w-auto px-8 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all"
               >
                 EXPLORE PRODUCTS
               </button>
@@ -288,7 +288,7 @@ const ProductPlatformExplorer = () => {
               {activeTab === product.id && (
                 <motion.div
                   layoutId="activePill"
-                  className="absolute inset-0 bg-enterprise-gradient -z-10"
+                  className="absolute inset-0 bg-[#2095F1] -z-10"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
@@ -335,7 +335,7 @@ const ProductPlatformExplorer = () => {
               </div>
 
               <div className="flex flex-wrap gap-6">
-                <Link to="/contact" className="group relative px-5 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <Link to="/contact" className="group relative px-5 py-3 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                   REQUEST DEMO
                 </Link>
                 {/* <button className="px-8 py-4 border border-slate-200 text-slate-600 rounded-full font-bold text-xs tracking-widest hover:bg-white transition-colors">
@@ -385,7 +385,7 @@ const CoreCapabilities = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">PLATFORM ENGINE</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-8">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Capabilities</span></h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-8">Core <span className="text-[#2095F1]">Capabilities</span></h2>
           <p className="text-slate-500 text-lg">
             Our product ecosystem is powered by a standardized set of high-performance AI engines that ensure consistency and reliability across all Suitor applications.
           </p>
@@ -429,7 +429,7 @@ const EcosystemVisual = () => {
 
       <div className="container-custom relative z-10 text-center">
         <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">SYSTEM ARCHITECTURE</span>
-        <h2 className="text-4xl md:text-6xl font-display font-bold mb-20">Unified Product <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Synergy</span></h2>
+        <h2 className="text-4xl md:text-6xl font-display font-bold mb-20">Unified Product <span className="text-[#2095F1]">Synergy</span></h2>
 
         <div className="relative max-w-5xl mx-auto py-20 flex items-center justify-center">
           {/* Central Brain */}
@@ -437,7 +437,7 @@ const EcosystemVisual = () => {
             <motion.div
               animate={{ scale: [1, 1.05, 1], rotate: [0, 5, -5, 0] }}
               transition={{ duration: 6, repeat: Infinity }}
-              className="w-48 h-48 rounded-[3rem] bg-enterprise-gradient flex items-center justify-center shadow-[0_0_50px_rgba(14,165,233,0.4)] border border-white/20"
+              className="w-48 h-48 rounded-[3rem] bg-[#2095F1] flex items-center justify-center shadow-[0_0_50px_rgba(14,165,233,0.4)] border border-white/20"
             >
               <Brain className="w-20 h-20 text-white" />
             </motion.div>
@@ -517,7 +517,7 @@ const ProductUseCases = () => {
       <div className="container-custom">
         <div className="mb-20">
           <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">REAL WORLD APPLICATIONS</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900">Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Use Cases</span></h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900">Industry <span className="text-[#2095F1]">Use Cases</span></h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -667,11 +667,11 @@ const ProductsPage = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-10 leading-tight">
-              Ready to Deploy <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">MnT Products</span> Across Your Enterprise?
+              Ready to Deploy <span className="text-[#2095F1]">MnT Products</span> Across Your Enterprise?
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/contact" className="px-8 py-5 bg-enterprise-gradient text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
+              <Link to="/contact" className="px-8 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
                 SCHEDULE DEMO
                 <ArrowUpRight className="w-4 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
