@@ -112,7 +112,7 @@ const GoogleLogo = () => (
 );
 
 const ClutchLogo = () => (
-    <img src="/clutch.png" alt="Clutch" className="w-24 h-auto object-contain" />
+    <img src="src/assets/clutch.png" alt="Clutch" className="w-24 h-auto object-contain" />
 );
 
 const ScrollStyles = () => (
