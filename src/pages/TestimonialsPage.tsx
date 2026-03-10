@@ -9,48 +9,48 @@ import Footer from "@/components/Footer";
 const reviewsRow1 = [
     {
         id: 1,
-        name: "Saman Malik",
-        role: "Customer Support Lead",
+        name: "Priya Venkatesh",
+        role: "Chennai",
         company: "HealthTech Solutions",
         rating: 5,
-        text: "The patient diagnostics AI developed by MnT has brought a level of precision that was previously unattainable. It's a fundamental shift in how we deliver care, ensuring our satisfaction.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+        text: "MnT didn't just build our app; they architected our future. The AI core they developed reduced our manual effort by 60%.",
+        image: "src/assets/p1.png"
     },
     {
         id: 2,
-        name: "Briana Patton",
-        role: "Operations Manager",
+        name: "Chakkaravarthi Balasubramaniyan",
+        role: "Australia",
         company: "Precision Systems",
         rating: 5,
-        text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely. Incredible partnership overall.",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
+        text: "We are happy that we utilised Magizh NexGen Technologies to create our company website in Australia. All the best for the team and happy to recommend them to others.",
+        image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=200&auto=format&fit=crop"
     },
     {
         id: 3,
-        name: "Omar Raza",
-        role: "CEO",
+        name: "Anitha Raj",
+        role: "Chennai",
         company: "Smart Manufacturing",
-        rating: 5,
-        text: "The intuitive interface and powerful analytics have transformed how we make decisions. Real-time insights right at our fingertips.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+        rating: 4,
+        text: "We've seen a 300% increase in operational efficiency since implementing the new AI-driven workflow engine.",
+        image: "src/assets/p4.jpg"
     },
     {
         id: 4,
-        name: "Zainab Hussain",
-        role: "Project Manager",
+        name: "Sanjay Kumar",
+        role: "Coimbatore",
         company: "EduTech Innovations",
-        rating: 5,
-        text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient in deploying new features to our regional clients.",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
+        rating: 4,
+        text: "Their team's ability to translate complex business needs into seamless digital experiences is simply outstanding.",
+        image: "src/assets/p2.png"
     },
     {
         id: 5,
-        name: "Farhan Siddiqui",
-        role: "Marketing Director",
+        name: "Vinoth",
+        role: "Vellore",
         company: "Retail Analytics",
         rating: 5,
         text: "Our business functions improved with a user-friendly design and positive customer feedback. MnT's approach to automation is simply unparalleled.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p3.png"
     }
 ];
 
@@ -58,52 +58,52 @@ const reviewsRow2 = [
     {
         id: 6,
         name: "Arjun Kannan",
-        role: "Founder & CEO",
+        role: "Delhi",
         company: "Kovai Precision",
-        rating: 5,
+        rating: 4,
         text: "MnT didn't just automate our manufacturing floor; they synchronized our entire production ecosystem with intelligence that thinks ahead of the curve.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p5.jpg"
     },
     {
         id: 7,
         name: "Meena Lakshmi",
-        role: "Operations Director",
+        role: "Puducherry",
         company: "Chennai HealthTech",
-        rating: 5,
+        rating: 4,
         text: "The healthcare diagnostics platform they built has scaled our operations significantly. Their team understands the nuances of enterprise healthcare in India.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p7.png"
     },
     {
         id: 8,
         name: "Praveen Rajendran",
-        role: "CTO",
+        role: "Banglore",
         company: "Madurai Smart Mfg",
         rating: 5,
         text: "Implementing edge intelligence across our factory floors was a complex task. MnT delivered on time and exceeded our performance benchmarks.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p6.png"
     },
     {
         id: 9,
         name: "Divya Subramaniam",
-        role: "Head of Strategy",
+        role: "Trichy",
         company: "Trichy EduTech",
         rating: 5,
         text: "Bespoke intelligence at its best. MnT helped us modernize our digital infrastructure, making us the leaders in the regional EduTech space.",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p8.png"
     },
     {
         id: 10,
         name: "Santhosh Kumar",
-        role: "Managing Partner",
+        role: "Salem",
         company: "Salem Retail Analytics",
-        rating: 5,
+        rating: 4,
         text: "Their retail analytics engine transformed how we view customer data. The efficiency gains in our Salem operations have been remarkable.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+        image: "src/assets/p9.png"
     }
 ];
 
 const GoogleLogo = () => (
-    <svg viewBox="0 0 24 24" className="w-12 h-12" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
         <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
         <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
@@ -112,7 +112,7 @@ const GoogleLogo = () => (
 );
 
 const ClutchLogo = () => (
-    <img src="src/assets/clutch.png" alt="Clutch" className="w-24 h-auto object-contain" />
+    <img src="src/assets/clutch.png" alt="Clutch" className="w-16 md:w-20 h-auto object-contain" />
 );
 
 const ScrollStyles = () => (
@@ -140,52 +140,56 @@ const ScrollStyles = () => (
     </style>
 );
 
-const RatingCard = ({ platform, rating, count, supportText }: { platform: 'google' | 'clutch', rating: string, count: string, supportText: string }) => (
+const RatingCard = ({ platform, rating, count, supportText, avatars }: { platform: 'google' | 'clutch', rating: string, count: string, supportText: string, avatars: string[] }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
-        className="flex-1 p-10 md:p-12 rounded-[2.5rem] md:rounded-[3rem] bg-white border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] transition-all duration-300 group overflow-hidden relative"
+        className="flex-1 p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] transition-all duration-300 group overflow-hidden relative"
     >
-        <div className="relative z-10 space-y-8">
+        <div className="relative z-10 space-y-6">
             {/* Platform Logo */}
-            <div className="w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center p-4 shadow-sm group-hover:scale-105 transition-transform duration-500">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-slate-50 flex items-center justify-center p-3 shadow-sm group-hover:scale-105 transition-transform duration-500">
                 {platform === 'google' ? <GoogleLogo /> : <ClutchLogo />}
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
                 {/* Star Rating */}
-                <div className="flex items-center gap-3">
-                    <div className="flex gap-1.5">
+                <div className="flex items-center gap-2 md:gap-3">
+                    <div className="flex gap-1 md:gap-1.5">
                         {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
+                            <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-amber-400 text-amber-400" />
                         ))}
                     </div>
-                    <span className="text-xl md:text-2xl font-bold text-slate-800">{rating}</span>
+                    <span className="text-lg md:text-xl font-bold text-slate-800">{rating}</span>
                 </div>
 
                 {/* Reviews Count */}
-                <div className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-[#111111] tracking-tight">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#111111] tracking-tight">
                     {count}
                 </div>
 
                 {/* Supporting Text */}
-                <p className="text-slate-500 font-medium text-lg leading-relaxed max-w-sm">
+                <p className="text-slate-500 font-medium text-sm md:text-base leading-relaxed max-w-sm">
                     {supportText}
                 </p>
             </div>
 
             {/* Bottom Section: Avatars & Verification */}
-            <div className="pt-8 border-t border-slate-100 flex items-center gap-6">
-                <div className="flex -space-x-3">
-                    {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="w-12 h-12 rounded-full border-4 border-white overflow-hidden bg-slate-100 shadow-sm relative z-[i]">
-                            <img src={`https://i.pravatar.cc/100?img=${platform === 'google' ? i + 10 : i + 20}`} alt="avatar" />
+            <div className="pt-6 border-t border-slate-100 flex items-center gap-4">
+                <div className="flex justify-center -space-x-3 mb-3">
+                    {avatars.map((img, i) => (
+                        <div key={i} className="w-8 h-8 rounded-full border-2 border-white overflow-hidden shadow-sm">
+                            <img
+                                src={img}
+                                alt="User"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     ))}
                 </div>
-                <div className="text-[12px] font-black text-primary/80 uppercase tracking-[0.2em]">
+                <div className="text-[10px] md:text-[11px] font-black text-primary/80 uppercase tracking-[0.2em] pt-0.5">
                     VERIFIED PARTNERS
                 </div>
             </div>
@@ -195,6 +199,9 @@ const RatingCard = ({ platform, rating, count, supportText }: { platform: 'googl
         <div className="absolute top-0 right-0 w-48 h-48 bg-slate-50 opacity-0 group-hover:opacity-40 transition-opacity rounded-full blur-3xl -mr-20 -mt-20" />
     </motion.div>
 );
+
+const googleAvatars = ["src/assets/p1.png", "src/assets/p2.png", "src/assets/p3.png", "src/assets/p4.jpg"];
+const clutchAvatars = ["src/assets/p5.jpg", "src/assets/p6.png", "src/assets/p7.png", "src/assets/p8.png"];
 
 const TestimonialCard = ({ review }: { review: typeof reviewsRow1[0] }) => (
     <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[420px] p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100/60 shadow-[0_4px_24px_rgb(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-6 items-start h-full">
@@ -272,19 +279,21 @@ const TestimonialsPage = () => {
             </section>
 
             {/* Rating Summary Section */}
-            <section className="pb-24 px-4 container-custom">
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <section className="pb-24 px-4 container-custom flex justify-center">
+                <div className="grid md:grid-cols-2 gap-10 md:gap-16 max-w-5xl w-full">
                     <RatingCard
                         platform="google"
                         rating="4.9 / 5"
                         count="512+ Reviews"
                         supportText="Trusted by leading enterprise partners across the Tamil Nadu manufacturing, tech, and healthcare corridors."
+                        avatars={googleAvatars}
                     />
                     <RatingCard
                         platform="clutch"
                         rating="4.8 / 5"
-                        count="200+ Reviews"
+                        count="150+ Reviews"
                         supportText="Recognized for excellence in AI implementation and digital transformation for high-growth industrial sectors."
+                        avatars={clutchAvatars}
                     />
                 </div>
             </section>
@@ -310,7 +319,7 @@ const TestimonialsPage = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="relative py-28 md:py-32 bg-slate-950 overflow-hidden">
+            <section className="relative py-18 md:py-24 bg-slate-950 overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[180px] rounded-full -translate-y-1/2 translate-x-1/2" />
                     <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-secondary/10 blur-[180px] rounded-full translate-y-1/2 -translate-x-1/2" />

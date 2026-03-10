@@ -2,41 +2,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
-/* ─── Portfolio Data ─── */
-const projects = [
-    {
-        title: "AI Sales Workforce Platform",
-        description: "Autonomous digital employees managing CRM pipelines.",
-        category: "AI",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-        title: "Enterprise Knowledge AI",
-        description: "Secure RAG-powered internal intelligence system.",
-        category: "Enterprise",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-        title: "Vision AI Quality Control",
-        description: "Computer vision automation for manufacturing.",
-        category: "Vision AI",
-        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-        title: "Smart Workflow Automation",
-        description: "End-to-end business process orchestration.",
-        category: "Automation",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-        title: "Generative AI Marketing Engine",
-        description: "Brand-aligned content automation platform.",
-        category: "AI",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
-    },
-];
+import { portfolioProjects } from "@/data/portfolioData";
 
-const PortfolioCard = ({ project, index }: { project: (typeof projects)[number]; index: number }) => {
+const PortfolioCard = ({ project, index }: { project: typeof portfolioProjects[0]; index: number }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -44,11 +12,12 @@ const PortfolioCard = ({ project, index }: { project: (typeof projects)[number];
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="group cursor-pointer flex flex-col h-full"
+            onClick={() => window.location.href = `/portfolio/${project.id}`}
         >
             <div className="relative overflow-hidden rounded-2xl mb-6 aspect-[4/3] w-full">
                 <img
                     src={project.image}
-                    alt={project.title}
+                    alt={project.name}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -62,11 +31,11 @@ const PortfolioCard = ({ project, index }: { project: (typeof projects)[number];
                 </div>
 
                 <h3 className="text-xl font-display font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
-                    {project.title}
+                    {project.name}
                 </h3>
 
                 <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                    {project.description}
+                    {project.shortDescription}
                 </p>
             </div>
         </motion.div>
@@ -118,7 +87,7 @@ const PortfolioSection = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative py-20 md:py-28 overflow-hidden"
+            className="relative py-12 md:py-14 overflow-hidden"
             style={{ background: "linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 30% 96%) 50%, hsl(210 40% 98%) 100%)" }}
         >
             {/* AI Grid */}
@@ -153,7 +122,7 @@ const PortfolioSection = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-block mb-6"
+                        className="inline-block mb-5"
                     >
                         <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-semibold tracking-wide">
                             MnT PROJECTS
@@ -172,11 +141,22 @@ const PortfolioSection = () => {
                     </motion.h2>
                 </div>
 
-                {/* ─── Projects Grid ─── */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                    {projects.slice(0, 3).map((project, index) => (
-                        <PortfolioCard key={index} project={project} index={index} />
-                    ))}
+                {/* ─── Projects Grid — Refactored to Horizontal Scroll ─── */}
+                <div className="relative group/scroll">
+                    <div className="flex gap-6 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory no-scrollbar scroll-smooth px-4 md:px-0">
+                        {portfolioProjects.map((project, index) => (
+                            <div key={project.id} className="flex-none w-[85vw] md:w-[400px] lg:w-[450px] snap-center">
+                                <PortfolioCard project={project} index={index} />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Add visual indicator for scroll on desktop */}
+                    <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-0 group-hover/scroll:opacity-100 transition-opacity">
+                        <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center animate-pulse">
+                            <ArrowRight className="w-6 h-6 text-primary" />
+                        </div>
+                    </div>
                 </div>
 
                 {/* ─── Bottom CTA ─── */}

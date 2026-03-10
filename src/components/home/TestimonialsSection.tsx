@@ -8,15 +8,15 @@ const testimonials = [
         quote: "MnT didn't just build our app; they architected our future. The AI core they developed reduced our manual effort by 60%.",
         highlight: "completely transformed",
         author: "Priya Venkatesh",
-        role: "CTO, Chennai Logistics",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
+        role: "Chennai",
+        image: "src/assets/p1.png"
     },
     {
         id: 2,
-        quote: "The strategic foresight MnT brings is unmatched. They are not vendors; they are partners in our technological evolution.",
+        quote: "We are happy that we utilised Magizh NexGen Technologies to create our company website in Australia. All the best for the team and happy to recommend them to others.",
         highlight: "game-changer",
-        author: "Karthik Mani",
-        role: "VP Engineering, TechFlow India",
+        author: "Chakkaravarthi Balasubramaniyan",
+        role: "Australia",
         image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=200&auto=format&fit=crop"
     },
     {
@@ -24,16 +24,16 @@ const testimonials = [
         quote: "We've seen a 300% increase in operational efficiency since implementing the new AI-driven workflow engine.",
         highlight: "300% increase",
         author: "Anitha Raj",
-        role: "COO, Madurai Innovations",
-        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&auto=format&fit=crop"
+        role: "Madurai",
+        image: "src/assets/p4.jpg"
     },
     {
         id: 4,
         quote: "Their team's ability to translate complex business needs into seamless digital experiences is simply outstanding.",
         highlight: "seamless experiences",
         author: "Sanjay Kumar",
-        role: "Director, Coimbatore Systems",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop"
+        role: "Coimbatore",
+        image: "src/assets/p2.png"
     }
 ];
 
@@ -101,10 +101,10 @@ const CenterTrustBadge = () => {
                 {/* Floating Avatars */}
                 <div className="flex justify-center -space-x-4 mb-4">
                     {[
-                        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop",
+                        "src/assets/p4.jpg",
                         "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=100&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=100&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=100&auto=format&fit=crop"
+                        "src/assets/p1.png",
+                        "src/assets/p2.png"
                     ].map((img, i) => (
                         <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-sm">
                             <img

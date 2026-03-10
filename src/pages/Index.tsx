@@ -18,7 +18,7 @@ const Index = () => {
       <EnterpriseBackground />
       <ScrollProgress
         showDots={true}
-        sections={["hero", "services", "products", "authority", "video", "portfolio", "partners", "testimonials"]}
+        sections={["hero", "services", "products", "authority", "video", "portfolio", "testimonials"]}
       />
       <Navigation />
       <HeroSection />
@@ -27,7 +27,7 @@ const Index = () => {
       <AuthoritySection />
       <VideoSection />
       <PortfolioSection />
-      <PartnersSection />
+      {/* <PartnersSection /> */}
       <TestimonialsSection />
       <FinalCTASection />
       <Footer />
