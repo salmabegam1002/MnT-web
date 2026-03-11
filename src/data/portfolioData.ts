@@ -1,3 +1,10 @@
+import poli1 from "@/assets/poli1.png";
+import poli2 from "@/assets/poli2.png";
+import po3 from "@/assets/po3.png";
+import poli4 from "@/assets/poli4.png";
+import poli4_1 from "@/assets/poli4-1.png";
+import poli5 from "@/assets/poli5.png";
+
 export interface ProjectData {
     id: string;
     name: string;
@@ -57,8 +64,8 @@ export const portfolioProjects: ProjectData[] = [
         shortDescription: "A modern online boutique engineered for performance, conversion, and scalability.",
         description: "Lia Fashion is an online boutique specializing in contemporary and traditional Indian women's wear. The objective was to create a scalable, stylish, and conversion-focused e-commerce platform that reflects elegance while ensuring performance and usability.",
         overview: "Lia Fashion is an online boutique specializing in contemporary and traditional Indian women's wear. The objective was to create a scalable, stylish, and conversion-focused e-commerce platform that reflects elegance while ensuring performance and usability.",
-        image: "/src/assets/poli1.png",
-        mainImage: "/src/assets/poli1.png",
+        image: poli1,
+        mainImage: poli1,
         techStack: ["Next.js", "Tailwind CSS", "Node.js", "PostgreSQL", "Razorpay", "Cloudinary"],
         snapshot: {
             industry: "Fashion & Retail",
@@ -136,8 +143,8 @@ export const portfolioProjects: ProjectData[] = [
         shortDescription: "An optimized online commerce platform built for seamless browsing and secure transactions.",
         description: "Leats was developed as a scalable online retail platform focusing on smooth browsing, high conversion, and efficient product management.",
         overview: "Leats was developed as a scalable online retail platform focusing on smooth browsing, high conversion, and efficient product management. The goal was to create a seamless shopping experience that manages growing catalogs while maintaining peak performance.",
-        image: "/src/assets/poli2.png",
-        mainImage: "src/assets/poli2.png",
+        image: poli2,
+        mainImage: poli2,
         techStack: ["React", "Next.js", "Tailwind CSS", "PostgreSQL", "Razorpay", "AWS S3"],
         snapshot: {
             industry: "Retail & Consumer",
@@ -213,8 +220,8 @@ export const portfolioProjects: ProjectData[] = [
         shortDescription: "A fully dynamic, content-managed website reflecting credibility and professional authority in compliance.",
         description: "We developed a fully dynamic, content-managed website for TrusComp to reflect credibility, service authority, and a structured digital presence in the compliance sector.",
         overview: "TrusComp focuses on professional compliance management, demanding a trust-centric, professional web experience. We built a structured CMS-driven content system with a modern UI aligned with their brand positioning.",
-        image: "/src/assets/po3.png",
-        mainImage: "/src/assets/po3.png",
+        image: po3,
+        mainImage: po3,
         techStack: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "Cloudinary"],
         snapshot: {
             industry: "Compliance & Risk",
@@ -292,8 +299,8 @@ export const portfolioProjects: ProjectData[] = [
         shortDescription: "A specialized digital hub for NDIS participants to discover and manage personalized support services.",
         description: "Elegant Care Services is a registered NDIS support provider in Australia. The platform is dedicated to providing compassionate, person-centered care for individuals with disabilities, specializing in Supported Independent Living (SIL) and Positive Behaviour Practice.",
         overview: "The platform serves as both a Service Provider Portal and an Information Hub. It acts as the primary digital touchpoint for NDIS participants to discover services, contact coordinators, and manage their support journey with quality assurance and 24/7 availability.",
-        image: "/src/assets/poli4.png",
-        mainImage: "/src/assets/poli4-1.png",
+        image: poli4,
+        mainImage: poli4_1,
         techStack: ["react.js", "Node.js", "mongodb"],
         snapshot: {
             industry: "Healthcare & NDIS",
@@ -372,8 +379,8 @@ export const portfolioProjects: ProjectData[] = [
         shortDescription: "A centralized ERP platform built to streamline civil project execution and financial oversight.",
         description: "A comprehensive ERP platform built for civil contractors and infrastructure companies to manage workforce, materials, compliance, and project tracking in one centralized system.",
         overview: "A comprehensive ERP platform built for civil contractors and infrastructure companies to manage workforce, materials, compliance, and project tracking in one centralized system. Civil ERP provides end-to-end visibility into civil project lifecycles.",
-        image: "/src/assets/poli5.png",
-        mainImage: "/src/assets/poli5.png",
+        image: poli5,
+        mainImage: poli5,
         techStack: ["Next.js", "Node.js", "MongoDB"],
         snapshot: {
             industry: "Infrastructure",
