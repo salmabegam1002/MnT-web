@@ -275,16 +275,17 @@ const ProductPlatformExplorer = () => {
 
       <div className="container-custom relative z-10">
         {/* Tabs Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-20">
-          {Object.values(productsData).map((product) => (
-            <button
-              key={product.id}
-              onClick={() => setActiveTab(product.id)}
-              className={`relative px-8 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden ${activeTab === product.id
-                ? "text-white shadow-xl shadow-primary/20"
-                : "text-slate-400 hover:text-primary bg-white border border-slate-100"
-                } `}
-            >
+        <div className="w-full overflow-x-auto scrollbar-hide mb-16 pb-4">
+          <div className="flex w-max min-w-full justify-start lg:justify-center gap-2 md:gap-4 px-4 mx-auto">
+            {Object.values(productsData).map((product) => (
+              <button
+                key={product.id}
+                onClick={() => setActiveTab(product.id)}
+                className={`relative px-5 py-3 md:px-6 md:py-3.5 rounded-full text-[10px] lg:text-xs font-bold uppercase tracking-widest transition-all duration-500 overflow-hidden shrink-0 ${activeTab === product.id
+                  ? "text-white shadow-xl shadow-primary/20"
+                  : "text-slate-400 hover:text-primary bg-white border border-slate-100"
+                  } `}
+              >
               {activeTab === product.id && (
                 <motion.div
                   layoutId="activePill"
@@ -295,6 +296,7 @@ const ProductPlatformExplorer = () => {
               {product.name}
             </button>
           ))}
+          </div>
         </div>
 
         {/* Product Detail Area */}
@@ -305,63 +307,63 @@ const ProductPlatformExplorer = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="grid lg:grid-cols-2 gap-20 items-center"
+            className="flex flex-col gap-16"
           >
-            {/* Content */}
-            <div>
-              <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">PRODUCT FOCUS</span>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6 leading-tight">
-                {activeProduct.name}
-              </h2>
-              <p className="text-xl text-slate-500 mb-8 leading-relaxed">
-                {activeProduct.description}
-              </p>
+            {/* Top: Description (Left) & Image (Right) */}
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <span className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">PRODUCT FOCUS</span>
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6 leading-tight">
+                  {activeProduct.name}
+                </h2>
+                <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                  {activeProduct.description}
+                </p>
+              </div>
 
-              <div className="grid sm:grid-cols-2 gap-6 mb-12">
+              {/* Visual */}
+              <div className="relative">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/20"
+                >
+                  <img
+                    src={activeProduct.image}
+                    alt={activeProduct.name}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+
+                {/* Accent elements */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full -z-10" />
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 blur-3xl rounded-full -z-10" />
+              </div>
+            </div>
+
+            {/* Bottom: 6 Features Grid (3x2) & Centered CTA */}
+            <div className="flex flex-col items-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 w-full max-w-6xl">
                 {activeProduct.features.map((feature, i) => {
                   const Icon = feature.icon;
                   return (
-                    <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white border border-slate-100 hover:border-primary/20 transition-all group">
-                      <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                        <Icon className="w-5 h-5 text-primary group-hover:text-white" />
+                    <div key={i} className="flex gap-4 p-6 rounded-2xl bg-white border border-slate-100 hover:border-primary/20 transition-all group">
+                      <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+                        <Icon className="w-6 h-6 text-primary group-hover:text-white" />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-slate-900 mb-1">{feature.title}</h4>
-                        <p className="text-xs text-slate-500 leading-relaxed">{feature.description}</p>
+                        <h4 className="text-base font-bold text-slate-900 mb-2">{feature.title}</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
                       </div>
                     </div>
                   )
                 })}
               </div>
 
-              <div className="flex flex-wrap gap-6">
-                <Link to="/contact" className="group relative px-5 py-3 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                  REQUEST DEMO
-                </Link>
-                {/* <button className="px-8 py-4 border border-slate-200 text-slate-600 rounded-full font-bold text-xs tracking-widest hover:bg-white transition-colors">
-                  DOWNLOAD BROCHURE
-                </button> */}
-              </div>
-            </div>
-
-            {/* Visual */}
-            <div className="relative">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/20"
-              >
-                <img
-                  src={activeProduct.image}
-                  alt={activeProduct.name}
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-
-              {/* Accent elements */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full -z-10" />
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 blur-3xl rounded-full -z-10" />
+              <Link to="/contact" className="group relative px-8 py-4 bg-[#2095F1] text-white font-bold rounded-full shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-1 transition-all duration-300 overflow-hidden text-sm uppercase tracking-widest">
+                REQUEST DEMO
+              </Link>
             </div>
           </motion.div>
         </AnimatePresence>

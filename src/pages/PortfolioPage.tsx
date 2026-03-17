@@ -93,7 +93,11 @@ const PortfolioShowcase = () => {
                                         alt={project.name}
                                         className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+                                    {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        <div className="flex items-center justify-center h-full">
+                                            <span className="px-6 py-2 bg-primary text-white rounded-full font-bold shadow-lg hover:bg-primary/90 transition-colors">View Case Study</span>
+                                        </div>
+                                    </div> */}
                                 </Link>
                             </div>
 

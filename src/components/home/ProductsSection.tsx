@@ -4,32 +4,46 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 
 const products = [
     {
-        id: "core",
+        id: "isuite-ai",
         title: "iSuite AI",
-        desc: "Centralized intelligence layer for process automation and decision support. Configurable workflows that adapt to your business rules.",
+        desc: "A unified AI platform designed to orchestrate enterprise intelligence, automate workflows, and power smart business decisions across systems.",
         image: `${import.meta.env.BASE_URL}isuiteai.png`,
         tags: ["Core", "AI", "Automation"]
     },
     {
-        id: "analytics",
+        id: "isuite-crm",
         title: "iSuite CRM",
-        desc: "Predictive modeling and real-time visualization for high-stakes business data. Turn raw streams into actionable strategic insights.",
+        desc: "An all-in-one CRM and marketing platform designed to capture leads, automate customer engagement, and streamline sales operations.",
         image: `${import.meta.env.BASE_URL}isuiteio.png`,
-        tags: ["Data", "Insight", "Predictive"]
+        tags: ["CRM", "Marketing", "Sales"]
     },
     {
-        id: "connect",
-        title: "iSuite HealthCare",
-        desc: "Seamless integration framework for modern digital infrastructures. Bridge legacy systems with next-gen AI capabilities effortlessly.",
+        id: "quick-commerce",
+        title: "Quick Commerce",
+        desc: "A fast and scalable e-commerce solution built for rapid retail operations, enabling seamless online shopping and product discovery.",
         image: `${import.meta.env.BASE_URL}isuitehealth.png`,
-        tags: ["Integration", "Cloud", "Scalable"]
+        tags: ["Retail", "E-commerce", "Scalable"]
     },
     {
-        id: "vision",
-        title: "iSuite Education",
-        desc: "Advanced computer vision models for quality control and security. Automated visual inspection with human-level accuracy at scale.",
+        id: "pos-system",
+        title: "POS System",
+        desc: "A powerful POS solution designed to manage retail sales, inventory tracking, and financial insights from a single smart dashboard.",
         image: `${import.meta.env.BASE_URL}isuiteedu.png`,
-        tags: ["Computer Vision", "Security", "ML"]
+        tags: ["Sales", "Inventory", "Analytics"]
+    },
+    {
+        id: "mahal-management",
+        title: "Mahal Management",
+        desc: "A complete venue and event management platform built to streamline bookings, event coordination, and hospitality services.",
+        image: `${import.meta.env.BASE_URL}isuiteai.png`,
+        tags: ["Venue", "Events", "Hospitality"]
+    },
+    {
+        id: "textile-ecommerce",
+        title: "Textile E-Commerce",
+        desc: "A modern fashion e-commerce platform designed for textile brands to showcase collections, manage products, and deliver seamless shopping.",
+        image: `${import.meta.env.BASE_URL}isuiteio.png`,
+        tags: ["Fashion", "Textile", "Storefront"]
     }
 ];
 
@@ -67,7 +81,7 @@ const ProductsSection = () => {
                 </div>
 
                 {/* Navigation Tabs */}
-                <div className="flex flex-wrap gap-3 md:gap-4 mb-16 overflow-x-auto pb-2 no-scrollbar justify-center px-4">
+                <div className="flex flex-wrap gap-3 md:gap-4 mb-16 overflow-x-auto pb-2 scrollbar-hide justify-center px-4">
                     {products.map((product, index) => (
                         <button
                             key={product.id}
