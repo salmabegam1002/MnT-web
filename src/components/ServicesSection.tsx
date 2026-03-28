@@ -83,14 +83,14 @@ const ServiceItem = ({ service, index, isInView }: { service: typeof services[0]
       transition={{ duration: 0.8, delay: index * 0.1 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`group relative flex flex-col md:flex-row items-center gap-6 cursor-pointer p-4 rounded-2xl transition-all duration-300 ${isLeft ? "md:text-left" : "md:flex-row-reverse md:text-right"}`}
+      className={`group relative flex flex-row md:items-center gap-4 md:gap-6 cursor-pointer p-3 md:p-4 rounded-2xl transition-all duration-300 text-left ${isLeft ? "md:text-left" : "md:flex-row-reverse md:text-right"}`}
     >
       {/* Icon Circle */}
-      <div className={`w-14 h-14 rounded-2xl ${service.color} border border-slate-100/50 flex items-center justify-center flex-shrink-0 transition-all duration-500 ${service.glowColor} group-hover:scale-110 md:group-hover:-translate-y-1`}>
-        <Icon className={`w-6 h-6 ${service.iconColor} transition-all duration-300 group-hover:scale-110`} />
+      <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl ${service.color} border border-slate-100/50 flex items-center justify-center flex-shrink-0 transition-all duration-500 ${service.glowColor} group-hover:scale-110 md:group-hover:-translate-y-1 mt-1 md:mt-0`}>
+        <Icon className={`w-5 h-5 md:w-6 md:h-6 ${service.iconColor} transition-all duration-300 group-hover:scale-110`} />
       </div>
 
-      <div className="flex-1 space-y-2">
+      <div className="flex-1 space-y-1.5 md:space-y-2">
         <h3 className={`font-display font-bold text-lg transition-colors duration-300 ${isHovered ? "text-primary" : "text-slate-900"}`}>
           {service.title}
           {/* Underline animation */}
@@ -185,7 +185,7 @@ const ServicesSection = () => {
     <section
       id="services"
       ref={containerRef}
-      className="relative py-8 md:py-20 bg-white overflow-hidden"
+      className="relative py-12 md:py-20 bg-white overflow-hidden"
     >
       {/* 🟦 Background Architecture */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1.5px,transparent_1.5px),linear-gradient(to_bottom,#f1f5f9_1.5px,transparent_1.5px)] bg-[size:5rem_5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_60%,transparent_100%)] opacity-40" />
@@ -205,7 +205,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.05] mb-6"
+            className="text-3xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.05] mb-6"
           >
             Intelligent Solutions <br />
             <span className="text-[#2095F1]">Built for the Future</span>
@@ -214,7 +214,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed px-4 md:px-0"
           >
             We deploy autonomous solutions that learn, adapt, and scale <br className="hidden md:block" />
             with your business objectives.
@@ -223,9 +223,9 @@ const ServicesSection = () => {
 
 
         {/* Main Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
           {/* Left Side Items */}
-          <div className="lg:col-span-4 space-y-8 lg:space-y-12">
+          <div className="lg:col-span-4 space-y-4 md:space-y-8 lg:space-y-12">
             {services.filter(s => s.side === "left").map((service, i) => (
               <ServiceItem key={service.id} service={service} index={i} isInView={isInView} />
             ))}
@@ -234,13 +234,13 @@ const ServicesSection = () => {
           {/* Center Robot Visual */}
           <motion.div
             style={{ y: robotY }}
-            className="lg:col-span-4 h-[400px] lg:h-[600px] flex items-center justify-center px-4"
+            className="lg:col-span-4 h-[280px] md:h-[400px] lg:h-[600px] flex items-center justify-center px-4"
           >
             <RobotVisual />
           </motion.div>
 
           {/* Right Side Items */}
-          <div className="lg:col-span-4 space-y-8 lg:space-y-12">
+          <div className="lg:col-span-4 space-y-4 md:space-y-8 lg:space-y-12">
             {services.filter(s => s.side === "right").map((service, i) => (
               <ServiceItem key={service.id} service={service} index={i + 3} isInView={isInView} />
             ))}

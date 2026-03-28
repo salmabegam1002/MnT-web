@@ -204,20 +204,20 @@ const googleAvatars = ["src/assets/p1.png", "src/assets/p2.png", "src/assets/p3.
 const clutchAvatars = ["src/assets/p5.jpg", "src/assets/p6.png", "src/assets/p7.png", "src/assets/p8.png"];
 
 const TestimonialCard = ({ review }: { review: typeof reviewsRow1[0] }) => (
-    <div className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[420px] p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100/60 shadow-[0_4px_24px_rgb(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-6 items-start h-full">
-        <div className="flex gap-1 mb-1">
+    <div className="flex-shrink-0 w-[65vw] sm:w-[320px] md:w-[420px] p-4 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-white border border-slate-100/60 shadow-[0_4px_24px_rgb(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-2 md:gap-6 items-start h-full">
+        <div className="flex gap-1 mb-px md:mb-1">
             {[...Array(5)].map((_, i) => (
-                <Star key={i} className={`w-5 h-5 ${i < review.rating ? 'fill-amber-400 text-amber-400' : 'text-slate-200'}`} />
+                <Star key={i} className={`w-3 h-3 md:w-5 md:h-5 ${i < review.rating ? 'fill-amber-400 text-amber-400' : 'text-slate-200'}`} />
             ))}
         </div>
-        <p className="text-[17px] md:text-[18px] text-slate-700 leading-relaxed font-medium">
+        <p className="text-[13px] md:text-[18px] text-slate-700 leading-snug md:leading-relaxed font-medium">
             {review.text}
         </p>
-        <div className="flex items-center gap-4 mt-auto pt-6">
-            <img src={review.image} className="w-14 h-14 rounded-full object-cover shadow-sm border border-slate-50" alt={review.name} />
+        <div className="flex items-center gap-2.5 md:gap-4 mt-auto pt-3 md:pt-6">
+            <img src={review.image} className="w-8 h-8 md:w-14 md:h-14 rounded-full object-cover shadow-sm border border-slate-50" alt={review.name} />
             <div>
-                <div className="text-base md:text-[17px] font-bold text-slate-900 leading-tight">{review.name}</div>
-                <div className="text-[13px] md:text-sm font-medium text-slate-500 mt-1">{review.role}</div>
+                <div className="text-[13px] md:text-[17px] font-bold text-slate-900 leading-tight">{review.name}</div>
+                <div className="text-[11px] md:text-[14px] font-medium text-slate-500 mt-0.5 md:mt-1">{review.role}</div>
             </div>
         </div>
     </div>
@@ -319,7 +319,7 @@ const TestimonialsPage = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="relative py-18 md:py-24 bg-slate-950 overflow-hidden">
+            <section className="relative py-14 md:py-24 bg-slate-950 overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[180px] rounded-full -translate-y-1/2 translate-x-1/2" />
                     <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-secondary/10 blur-[180px] rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -341,8 +341,8 @@ const TestimonialsPage = () => {
                             Join the ranks of the most innovative regional leaders scaling with bespoke intelligence.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8">
-                            <Link to="/contact" className="px-12 py-6 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 hover:-translate-y-1 transition-all w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 px-4 md:px-0">
+                            <Link to="/contact" className="px-6 py-4 md:px-12 md:py-6 bg-[#2095F1] text-white rounded-full font-bold text-xs md:text-sm tracking-widest shadow-2xl shadow-primary/40 hover:-translate-y-1 transition-all w-full sm:w-auto text-center">
                                 SCHEDULE CONSULTATION
                             </Link>
                         </div>

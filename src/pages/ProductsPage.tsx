@@ -644,7 +644,7 @@ const ProductsPage = () => {
       {/* <WhyMnTProducts /> */}
 
       {/* 9️⃣ Final CTA Section */}
-      <section className="relative py-18 md:py-24 bg-slate-950 overflow-hidden">
+      <section className="relative py-14 md:py-24 bg-slate-950 overflow-hidden">
         {/* Background Decor */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.2),transparent_70%)]" />
@@ -673,7 +673,7 @@ const ProductsPage = () => {
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link to="/contact" className="px-8 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
+              <Link to="/contact" className="px-6 py-3.5 md:px-8 md:py-5 bg-[#2095F1] text-white rounded-full font-bold text-xs md:text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group">
                 SCHEDULE DEMO
                 <ArrowUpRight className="w-4 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>

@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 
 const VideoSection = () => {
     return (
-        <section id="video" className="relative py-20 md:py-24 bg-slate-900 overflow-hidden">
+        <section id="video" className="relative py-14 md:py-24 bg-slate-900 overflow-hidden">
             {/* Background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent" />
@@ -26,13 +26,13 @@ const VideoSection = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-4xl md:text-5xl font-display font-bold leading-tight text-white mb-8"
+                            className="text-3xl md:text-5xl font-display font-bold leading-tight text-white mb-8"
                         >
                             See how we define the <br />
                             <span className="text-[#2095F1]">future of enterprise</span>
                         </motion.h2>
 
-                        <p className="text-xl text-slate-400 leading-relaxed mb-12 max-w-lg">
+                        <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-12 max-w-lg">
                             Through strategic AI integration and bespoke software architecture,
                             we've enabled global organizations to scale 10x faster while
                             reducing operational complexity by 40%.

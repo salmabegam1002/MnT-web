@@ -74,20 +74,20 @@ const ProductsSection = () => {
                     <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-6 block">
                         Our Suite
                     </span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight">
-                        Tailored Solutions for <br />
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-[1.1] tracking-tight px-4 md:px-0">
+                        Our Solutions for<br />
                         <span className="text-[#2095F1]">Every Business Need</span>
                     </h2>
                 </div>
 
                 {/* Navigation Tabs */}
-                <div className="flex flex-wrap gap-3 md:gap-4 mb-16 overflow-x-auto pb-2 scrollbar-hide justify-center px-4">
+                <div className="flex md:flex-wrap gap-3 md:gap-4 mb-10 md:mb-16 overflow-x-auto w-[calc(100vw)] -ml-4 md:ml-0 md:w-full pb-4 md:pb-2 pt-2 px-4 md:px-0 scrollbar-hide snap-x snap-mandatory md:justify-center">
                     {products.map((product, index) => (
                         <button
                             key={product.id}
                             onClick={() => handleTabClick(index)}
-                            className={`px-8 py-3 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border whitespace-nowrap ${index === activeTab
-                                ? "bg-[#2095F1] text-white border-transparent shadow-md shadow-blue-500/10 scale-105"
+                            className={`shrink-0 snap-center px-6 md:px-8 py-2.5 md:py-3 rounded-full text-[13px] md:text-sm font-bold tracking-wide transition-all duration-300 border whitespace-nowrap ${index === activeTab
+                                ? "bg-[#2095F1] text-white border-transparent shadow-[0_4px_12px_rgba(32,149,241,0.25)] md:scale-105"
                                 : "bg-white text-slate-500 border-slate-200 hover:border-primary/30 hover:text-primary hover:bg-slate-50"
                                 }`}
                         >
@@ -110,13 +110,13 @@ const ProductsSection = () => {
                             {/* Left Content */}
                             <div className="order-2 lg:order-1 space-y-10 text-center lg:text-left">
                                 <div className="relative">
-                                    <div className="text-[100px] md:text-[120px] font-bold text-slate-200 leading-none absolute -top-16 lg:-top-20 left-1/2 lg:-left-6 -translate-x-1/2 lg:translate-x-0 -z-10 select-none opacity-50 blur-[0px]">
+                                    <div className="text-[80px] md:text-[120px] font-bold text-slate-200 leading-none absolute -top-12 lg:-top-20 left-1/2 lg:-left-6 -translate-x-1/2 lg:translate-x-0 -z-10 select-none opacity-50 blur-[0px]">
                                         {String(activeTab + 1).padStart(2, '0')}
                                     </div>
-                                    <h3 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6 leading-tight">
+                                    <h3 className="text-2xl md:text-5xl font-display font-bold text-slate-900 mb-4 md:mb-6 leading-tight px-4 md:px-0">
                                         {products[activeTab].title}
                                     </h3>
-                                    <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                                    <p className="text-base md:text-xl text-slate-500 leading-relaxed max-w-lg mx-auto lg:mx-0 px-4 md:px-0">
                                         {products[activeTab].desc}
                                     </p>
                                 </div>
@@ -140,10 +140,10 @@ const ProductsSection = () => {
                             </div>
 
                             {/* Right Visual */}
-                            <div className="order-1 lg:order-2">
-                                <div className="relative aspect-[4/3] md:aspect-[16/10] group">
-                                    <div className="h-full w-full rounded-3xl overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors duration-500 z-10" />
+                            <div className="order-1 lg:order-2 flex justify-center">
+                                <div className="relative aspect-video md:aspect-[16/10] group w-full max-w-xs sm:max-w-sm md:max-w-none">
+                                    <div className="h-full w-full rounded-2xl md:rounded-3xl overflow-hidden relative">
+                                        <div className="absolute inset-0 bg-slate-900/0 transition-colors duration-500 z-10" />
                                         <img
                                             src={products[activeTab].image}
                                             alt={products[activeTab].title}

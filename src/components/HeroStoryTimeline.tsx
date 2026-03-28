@@ -288,44 +288,39 @@ export default function HeroStoryTimeline() {
             </div>
 
             {/* Mobile: Vertical Stack (Modified from horizontal scroll per request) */}
-            <div className="md:hidden flex flex-col gap-3 px-4">
+            <div className="md:hidden flex flex-col gap-3 px-4 mt-6">
                 {storySteps.map((step, index) => {
-                    const isActive = index === activeStep;
-                    const isPast = index < activeStep;
                     return (
                         <motion.div
                             key={step.id}
-                            className={`flex items-start gap-4 transition-all duration-100 ${isActive ? 'opacity-100' : isPast ? 'opacity-60' : 'opacity-40'}`}
+                            className={`flex items-start gap-4 transition-all duration-100 opacity-100`}
                             onClick={() => setActiveStep(index)}
                             initial={{ opacity: 0, y: 10 }}
-                            animate={isInView ? { opacity: isActive ? 1 : isPast ? 0.6 : 0.4, y: 0 } : {}}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
                         >
                             {/* Node Line */}
                             <div className="flex flex-col items-center self-stretch">
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-colors duration-300 shrink-0 z-10 bg-white ${isActive || isPast ? "border-primary text-primary" : "border-slate-200 text-slate-400"
-                                    }`}>
+                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-colors duration-300 shrink-0 z-10 bg-white border-primary text-primary`}>
                                     {index + 1}
                                 </div>
                                 {index !== storySteps.length - 1 && (
-                                    <div className={`w-[2px] flex-1 my-1 rounded-full transition-colors duration-500 ${isPast ? 'bg-primary' : 'bg-slate-100'}`} />
+                                    <div className={`w-[2px] flex-1 my-1 rounded-full transition-colors duration-500 bg-primary/20`} />
                                 )}
                             </div>
 
                             {/* Content */}
-                            <div className={`flex items-center gap-4 flex-1 pb-6 ${isActive ? 'scale-100 transform origin-left' : 'scale-95'}`}>
-                                <div className={`w-16 h-16 rounded-xl p-2 shrink-0 transition-all duration-300 bg-white border ${isActive ? "border-primary shadow-sm text-primary" : "border-slate-100 text-slate-300 grayscale"
-                                    }`}>
-                                    <step.Doodle isActive={isActive || isPast} />
+                            <div className={`flex items-start gap-4 flex-1 pb-6 scale-100 transform origin-left`}>
+                                <div className={`w-14 h-14 rounded-xl p-2 shrink-0 transition-all duration-300 bg-white border border-primary/20 shadow-sm text-primary`}>
+                                    <step.Doodle isActive={true} />
                                 </div>
-                                <div className="flex flex-col">
-                                    <span className={`text-xs font-bold uppercase tracking-wide mb-1 ${isActive ? "text-slate-900" : "text-slate-400"}`}>
+                                <div className="flex flex-col mt-1">
+                                    <span className={`text-[13px] font-bold uppercase tracking-wide mb-1 text-slate-900`}>
                                         {step.label}
                                     </span>
-                                    {isActive && (
-                                        <p className="text-[11px] text-slate-500 leading-snug">
-                                            {step.desc}
-                                        </p>
-                                    )}
+                                    <p className="text-[12px] text-slate-500 leading-relaxed">
+                                        {step.desc}
+                                    </p>
                                 </div>
                             </div>
                         </motion.div>

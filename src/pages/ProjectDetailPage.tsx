@@ -655,7 +655,7 @@ const ProjectDetailPage = () => {
                             >
                                 <Link
                                     to="/contact"
-                                    className="px-10 py-5 bg-[#2095F1] text-white rounded-full font-bold text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group relative overflow-hidden"
+                                    className="px-6 py-3.5 md:px-10 md:py-5 bg-[#2095F1] text-white rounded-full font-bold text-xs md:text-sm tracking-widest shadow-2xl shadow-primary/40 flex items-center gap-4 group relative overflow-hidden"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                                     TALK TO OUR EXPERTS

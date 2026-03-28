@@ -42,7 +42,7 @@ const AuthoritySection = () => {
     const bgX = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
 
     return (
-        <section id="authority" className="relative py-10 md:py-14 lg:py-18 overflow-hidden" ref={ref}>
+        <section id="authority" className="relative py-12 md:py-14 lg:py-18 overflow-hidden" ref={ref}>
             {/* Soft radial glow */}
             <div className="absolute inset-0 bg-gradient-to-b from-card/40 via-background to-card/40" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/[0.04] blur-[120px]" />
@@ -97,7 +97,7 @@ const AuthoritySection = () => {
                             Our Authority
                         </span>
 
-                        <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold leading-[1.15] mb-6">
+                        <h2 className="text-2xl md:text-4xl lg:text-[2.75rem] font-display font-bold leading-[1.15] mb-6">
                             We Architect the Future of{" "}
                             <span className="text-gradient">Intelligent Systems</span>
                         </h2>

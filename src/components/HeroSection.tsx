@@ -30,7 +30,7 @@ const HeroSection = () => {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/20 pt-24 md:pt-160"
+      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/20 pt-20 md:pt-32 lg:pt-40"
     >
       {/* Background Typography - Faded */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
@@ -98,7 +98,7 @@ linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-[1.1] mb-6 max-w-5xl mx-auto"
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-[1.1] md:mb-6 max-w-5xl mx-auto"
           >
             Transform Your Ideas Into{" "}
             <span className="text-[#2095F1]">
@@ -111,7 +111,7 @@ linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-slate-600 mb-2 max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-xl text-slate-600 mb-2 max-w-2xl mx-auto leading-relaxed"
           >
             We architect and build premium digital solutions that streamline operations,
             enhance user experiences, and drive sustainable business growth.

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const FinalCTASection = () => {
     return (
-        <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-slate-900">
+        <section className="relative min-h-[50vh] md:min-h-[60vh] py-16 md:py-0 flex items-center overflow-hidden bg-slate-900">
             {/* Full-width corporate image with overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -20,7 +20,7 @@ const FinalCTASection = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-10 leading-[1.1]"
+                        className="text-3xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-8 md:mb-10 leading-[1.1]"
                     >
                         Ready to architect <br />
                         your next legacy?

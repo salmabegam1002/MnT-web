@@ -14,7 +14,7 @@ const PortfolioCard = ({ project, index }: { project: typeof portfolioProjects[0
             className="group cursor-pointer flex flex-col h-full bg-white rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(32,149,241,0.15)] hover:-translate-y-3 transition-all duration-500 overflow-hidden"
             onClick={() => window.location.href = `/portfolio/${project.id}`}
         >
-            <div className="relative overflow-hidden aspect-[4/3] w-full p-4 md:p-5 bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-t-3xl">
+            <div className="relative overflow-hidden aspect-[4/3] w-full p-3 md:p-4 bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-t-3xl">
                 <div className="w-full h-full rounded-2xl overflow-hidden shadow-sm relative ring-1 ring-slate-200/50 group-hover:ring-primary/20 transition-all duration-500">
                     <img
                         src={project.image}
@@ -26,14 +26,14 @@ const PortfolioCard = ({ project, index }: { project: typeof portfolioProjects[0
                 </div>
             </div>
 
-            <div className="flex flex-col flex-grow px-6 md:px-8 pb-8 pt-6">
-                <div className="mb-4">
-                    <span className="inline-block px-4 py-1.5 rounded-full text-[10px] font-bold bg-[#2095F1]/10 text-[#2095F1] uppercase tracking-wider backdrop-blur-sm transition-colors group-hover:bg-[#2095F1]/20">
+            <div className="flex flex-col flex-grow px-5 md:px-6 pb-6 pt-5">
+                <div className="mb-3">
+                    <span className="inline-block px-3 py-1.5 rounded-full text-[9px] font-bold bg-[#2095F1]/10 text-[#2095F1] uppercase tracking-wider backdrop-blur-sm transition-colors group-hover:bg-[#2095F1]/20">
                         {project.category}
                     </span>
                 </div>
 
-                <h3 className="text-2xl font-display font-bold text-slate-900 mb-3 leading-tight group-hover:text-[#2095F1] transition-colors duration-300">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 mb-2 leading-tight group-hover:text-[#2095F1] transition-colors duration-300">
                     {project.name}
                 </h3>
 
@@ -58,9 +58,9 @@ const BackgroundEffects = () => (
                 <rect width="100%" height="100%" fill="url(#portfolio-grid)" className="text-[#2095F1]" />
             </svg>
         </div>
-        
+
         {/* Subtle moving gradient mesh */}
-        <motion.div 
+        <motion.div
             animate={{
                 backgroundPosition: ["0% 0%", "100% 100%"],
             }}
@@ -84,12 +84,29 @@ const PortfolioSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    const updateScrollState = () => {
+        if (scrollContainerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+            setCanScrollLeft(scrollLeft > 0);
+            // using Math.ceil for precision issues with sub-pixels
+            setCanScrollRight(Math.ceil(scrollLeft + clientWidth) < scrollWidth);
+        }
+    };
 
     useEffect(() => {
         const check = () => setIsMobile(window.innerWidth < 768);
         check();
         window.addEventListener("resize", check);
         return () => window.removeEventListener("resize", check);
+    }, []);
+
+    useEffect(() => {
+        updateScrollState();
+        window.addEventListener("resize", updateScrollState);
+        return () => window.removeEventListener("resize", updateScrollState);
     }, []);
 
     const { scrollYProgress } = useScroll({
@@ -116,20 +133,22 @@ const PortfolioSection = () => {
 
     const handleScrollRight = () => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: 450, behavior: 'smooth' });
+            const cardWidth = scrollContainerRef.current.firstElementChild?.clientWidth || 360;
+            scrollContainerRef.current.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
         }
     };
 
     const handleScrollLeft = () => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollBy({ left: -450, behavior: 'smooth' });
+            const cardWidth = scrollContainerRef.current.firstElementChild?.clientWidth || 360;
+            scrollContainerRef.current.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
         }
     };
 
     return (
         <section
             ref={sectionRef}
-            className="relative py-20 md:py-32 overflow-hidden bg-white"
+            className="relative py-10 md:py-18 overflow-hidden bg-white"
         >
             <BackgroundEffects />
 
@@ -157,7 +176,7 @@ const PortfolioSection = () => {
 
             <div className="container-custom relative z-10 w-full">
                 {/* ─── Section Header ─── */}
-                <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -182,22 +201,23 @@ const PortfolioSection = () => {
                 </div>
 
                 {/* ─── Projects Carousel ─── */}
-                <div className="relative group/scroll w-full mb-10">
-                    <motion.div 
+                <div className="relative group/scroll w-full mb-9">
+                    <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true, amount: 0.1 }}
                         className="w-full relative"
                     >
-                        <div 
+                        <div
                             ref={scrollContainerRef}
-                            className="flex gap-6 md:gap-10 overflow-x-auto pb-12 pt-4 px-4 md:px-0 snap-x snap-mandatory scrollbar-hide scroll-smooth relative"
+                            onScroll={updateScrollState}
+                            className="flex gap-4 md:gap-6 overflow-x-auto pb-12 pt-4 px-4 md:px-0 snap-x snap-mandatory scrollbar-hide scroll-smooth relative"
                         >
                             {portfolioProjects.map((project, index) => (
-                                <div 
-                                    key={project.id} 
-                                    className="flex-none w-[85vw] sm:w-[450px] md:w-[500px] lg:w-[550px] snap-center shrink-0"
+                                <div
+                                    key={project.id}
+                                    className="flex-none w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[400px] snap-center shrink-0"
                                 >
                                     <PortfolioCard project={project} index={index} />
                                 </div>
@@ -206,27 +226,31 @@ const PortfolioSection = () => {
                     </motion.div>
 
                     {/* Navigation visual hints/arrows */}
-                    <div className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover/scroll:opacity-100 transition-opacity duration-300">
-                        <motion.button 
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={handleScrollLeft}
-                            className="w-14 h-14 rounded-full bg-white shadow-xl hover:shadow-2xl border border-slate-100 flex items-center justify-center text-slate-600 hover:text-[#2095F1] transition-all"
-                        >
-                            <ArrowLeft className="w-6 h-6" />
-                        </motion.button>
-                    </div>
+                    {canScrollLeft && (
+                        <div className="hidden md:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover/scroll:opacity-100 transition-opacity duration-300">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={handleScrollLeft}
+                                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white shadow-xl hover:shadow-2xl border border-slate-100 flex items-center justify-center text-slate-600 hover:text-[#2095F1] transition-all"
+                            >
+                                <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
+                            </motion.button>
+                        </div>
+                    )}
 
-                    <div className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover/scroll:opacity-100 transition-opacity duration-300">
-                        <motion.button 
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={handleScrollRight}
-                            className="w-14 h-14 rounded-full bg-white shadow-xl hover:shadow-2xl border border-slate-100 flex items-center justify-center text-slate-600 hover:text-[#2095F1] transition-all"
-                        >
-                            <ArrowRight className="w-6 h-6" />
-                        </motion.button>
-                    </div>
+                    {canScrollRight && (
+                        <div className="hidden md:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-30 opacity-0 group-hover/scroll:opacity-100 transition-opacity duration-300">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={handleScrollRight}
+                                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white shadow-xl hover:shadow-2xl border border-slate-100 flex items-center justify-center text-slate-600 hover:text-[#2095F1] transition-all"
+                            >
+                                <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+                            </motion.button>
+                        </div>
+                    )}
                 </div>
 
                 {/* ─── Bottom CTA ─── */}
@@ -239,11 +263,11 @@ const PortfolioSection = () => {
                 >
                     <a
                         href="/portfolio"
-                        className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#2095F1] text-white font-bold text-sm tracking-widest hover:bg-[#1b84d6] hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(32,149,241,0.5)] transition-all duration-300 group"
+                        className="inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-10 md:py-4 rounded-full bg-[#2095F1] text-white font-bold text-xs md:text-sm tracking-widest hover:bg-[#1b84d6] hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(32,149,241,0.5)] transition-all duration-300 group"
                     >
                         VIEW ALL PROJECTS
-                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                            <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover:translate-x-1" />
                         </div>
                     </a>
                 </motion.div>

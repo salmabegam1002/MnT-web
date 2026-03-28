@@ -129,9 +129,9 @@ const CenterTrustBadge = () => {
                     from <span className="text-slate-900">250K+ reviews</span>
                 </p>
 
-                <button className="px-6 py-3 rounded-full bg-[#2095F1] text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto group/btn">
+                <button className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-[#2095F1] text-white text-xs md:text-sm font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto group/btn">
                     View all testimonials
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
             </div>
         </motion.div>
@@ -179,7 +179,7 @@ const TestimonialsSection = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight"
+                        className="text-3xl md:text-5xl font-display font-bold text-slate-900 tracking-tight"
                     >
                         Trusted by <span className="text-[#2095F1]">Industry Leaders</span>
                     </motion.h2>

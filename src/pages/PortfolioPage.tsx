@@ -75,7 +75,7 @@ const PortfolioShowcase = () => {
     return (
         <section id="featured-work" className="py-24 bg-white">
             <div className="container-custom">
-                <div className="space-y-32 md:space-y-48">
+                <div className="space-y-16 md:space-y-48">
                     {portfolioProjects.map((project, index) => (
                         <motion.div
                             key={project.id}
