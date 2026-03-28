@@ -4,6 +4,17 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import p1 from "@/assets/p1.png";
+import p2 from "@/assets/p2.png";
+import p3 from "@/assets/p3.png";
+import p4 from "@/assets/p4.jpg";
+import p5 from "@/assets/p5.jpg";
+import p6 from "@/assets/p6.png";
+import p7 from "@/assets/p7.png";
+import p8 from "@/assets/p8.png";
+import p9 from "@/assets/p9.png";
+import clutch from "@/assets/clutch.png";
+
 
 // --- Review Data ---
 const reviewsRow1 = [
@@ -14,7 +25,7 @@ const reviewsRow1 = [
         company: "HealthTech Solutions",
         rating: 5,
         text: "MnT didn't just build our app; they architected our future. The AI core they developed reduced our manual effort by 60%.",
-        image: "src/assets/p1.png"
+        image: p1
     },
     {
         id: 2,
@@ -32,7 +43,7 @@ const reviewsRow1 = [
         company: "Smart Manufacturing",
         rating: 4,
         text: "We've seen a 300% increase in operational efficiency since implementing the new AI-driven workflow engine.",
-        image: "src/assets/p4.jpg"
+        image: p4
     },
     {
         id: 4,
@@ -41,7 +52,7 @@ const reviewsRow1 = [
         company: "EduTech Innovations",
         rating: 4,
         text: "Their team's ability to translate complex business needs into seamless digital experiences is simply outstanding.",
-        image: "src/assets/p2.png"
+        image: p2
     },
     {
         id: 5,
@@ -50,7 +61,7 @@ const reviewsRow1 = [
         company: "Retail Analytics",
         rating: 5,
         text: "Our business functions improved with a user-friendly design and positive customer feedback. MnT's approach to automation is simply unparalleled.",
-        image: "src/assets/p3.png"
+        image: p3
     }
 ];
 
@@ -62,7 +73,7 @@ const reviewsRow2 = [
         company: "Kovai Precision",
         rating: 4,
         text: "MnT didn't just automate our manufacturing floor; they synchronized our entire production ecosystem with intelligence that thinks ahead of the curve.",
-        image: "src/assets/p5.jpg"
+        image: p5
     },
     {
         id: 7,
@@ -71,7 +82,7 @@ const reviewsRow2 = [
         company: "Chennai HealthTech",
         rating: 4,
         text: "The healthcare diagnostics platform they built has scaled our operations significantly. Their team understands the nuances of enterprise healthcare in India.",
-        image: "src/assets/p7.png"
+        image: p7
     },
     {
         id: 8,
@@ -80,7 +91,7 @@ const reviewsRow2 = [
         company: "Madurai Smart Mfg",
         rating: 5,
         text: "Implementing edge intelligence across our factory floors was a complex task. MnT delivered on time and exceeded our performance benchmarks.",
-        image: "src/assets/p6.png"
+        image: p6
     },
     {
         id: 9,
@@ -89,7 +100,7 @@ const reviewsRow2 = [
         company: "Trichy EduTech",
         rating: 5,
         text: "Bespoke intelligence at its best. MnT helped us modernize our digital infrastructure, making us the leaders in the regional EduTech space.",
-        image: "src/assets/p8.png"
+        image: p8
     },
     {
         id: 10,
@@ -98,7 +109,7 @@ const reviewsRow2 = [
         company: "Salem Retail Analytics",
         rating: 4,
         text: "Their retail analytics engine transformed how we view customer data. The efficiency gains in our Salem operations have been remarkable.",
-        image: "src/assets/p9.png"
+        image: p9
     }
 ];
 
@@ -112,7 +123,7 @@ const GoogleLogo = () => (
 );
 
 const ClutchLogo = () => (
-    <img src="src/assets/clutch.png" alt="Clutch" className="w-16 md:w-20 h-auto object-contain" />
+    <img src={clutch} alt="Clutch" className="w-16 md:w-20 h-auto object-contain" />
 );
 
 const ScrollStyles = () => (
@@ -200,8 +211,8 @@ const RatingCard = ({ platform, rating, count, supportText, avatars }: { platfor
     </motion.div>
 );
 
-const googleAvatars = ["src/assets/p1.png", "src/assets/p2.png", "src/assets/p3.png", "src/assets/p4.jpg"];
-const clutchAvatars = ["src/assets/p5.jpg", "src/assets/p6.png", "src/assets/p7.png", "src/assets/p8.png"];
+const googleAvatars = [p1, p2, p3, p4];
+const clutchAvatars = [p5, p6, p7, p8];
 
 const TestimonialCard = ({ review }: { review: typeof reviewsRow1[0] }) => (
     <div className="flex-shrink-0 w-[65vw] sm:w-[320px] md:w-[420px] p-4 md:p-10 rounded-2xl md:rounded-[2.5rem] bg-white border border-slate-100/60 shadow-[0_4px_24px_rgb(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.06)] transition-all duration-300 flex flex-col gap-2 md:gap-6 items-start h-full">

@@ -1,6 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import p1 from "@/assets/p1.png";
+import p2 from "@/assets/p2.png";
+import p4 from "@/assets/p4.jpg";
+
 
 const testimonials = [
     {
@@ -9,7 +13,7 @@ const testimonials = [
         highlight: "completely transformed",
         author: "Priya Venkatesh",
         role: "Chennai",
-        image: "src/assets/p1.png"
+        image: p1
     },
     {
         id: 2,
@@ -25,7 +29,7 @@ const testimonials = [
         highlight: "300% increase",
         author: "Anitha Raj",
         role: "Madurai",
-        image: "src/assets/p4.jpg"
+        image: p4
     },
     {
         id: 4,
@@ -33,7 +37,7 @@ const testimonials = [
         highlight: "seamless experiences",
         author: "Sanjay Kumar",
         role: "Coimbatore",
-        image: "src/assets/p2.png"
+        image: p2
     }
 ];
 
@@ -101,10 +105,10 @@ const CenterTrustBadge = () => {
                 {/* Floating Avatars */}
                 <div className="flex justify-center -space-x-4 mb-4">
                     {[
-                        "src/assets/p4.jpg",
+                        p4,
                         "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=100&auto=format&fit=crop",
-                        "src/assets/p1.png",
-                        "src/assets/p2.png"
+                        p1,
+                        p2
                     ].map((img, i) => (
                         <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-sm">
                             <img
