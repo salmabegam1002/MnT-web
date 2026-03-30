@@ -7,7 +7,7 @@ const products = [
         id: "isuite-ai",
         title: "iSuite AI",
         desc: "A unified AI platform designed to orchestrate enterprise intelligence, automate workflows, and power smart business decisions across systems.",
-        image: `${import.meta.env.BASE_URL}isuiteai.png`,
+        image: `${import.meta.env.BASE_URL}mntai.png`,
         tags: ["Core", "AI", "Automation"]
     },
     {
@@ -21,28 +21,28 @@ const products = [
         id: "quick-commerce",
         title: "Quick Commerce",
         desc: "A fast and scalable e-commerce solution built for rapid retail operations, enabling seamless online shopping and product discovery.",
-        image: `${import.meta.env.BASE_URL}isuitehealth.png`,
+        image: `${import.meta.env.BASE_URL}isuitec.png`,
         tags: ["Retail", "E-commerce", "Scalable"]
     },
     {
         id: "pos-system",
         title: "POS System",
         desc: "A powerful POS solution designed to manage retail sales, inventory tracking, and financial insights from a single smart dashboard.",
-        image: `${import.meta.env.BASE_URL}isuiteedu.png`,
+        image: `${import.meta.env.BASE_URL}mntpos.png`,
         tags: ["Sales", "Inventory", "Analytics"]
     },
     {
         id: "mahal-management",
         title: "Mahal Management",
         desc: "A complete venue and event management platform built to streamline bookings, event coordination, and hospitality services.",
-        image: `${import.meta.env.BASE_URL}isuiteai.png`,
+        image: `${import.meta.env.BASE_URL}mntmm.png`,
         tags: ["Venue", "Events", "Hospitality"]
     },
     {
         id: "textile-ecommerce",
         title: "Textile E-Commerce",
         desc: "A modern fashion e-commerce platform designed for textile brands to showcase collections, manage products, and deliver seamless shopping.",
-        image: `${import.meta.env.BASE_URL}isuiteio.png`,
+        image: `${import.meta.env.BASE_URL}mntecom.png`,
         tags: ["Fashion", "Textile", "Storefront"]
     }
 ];

@@ -1,9 +1,9 @@
-import { 
-    Bot, LineChart, Stethoscope, GraduationCap, Zap, Shield, Network, 
-    BarChart3, Globe2, Brain, MessageSquare, Database, ArrowRight, 
-    CheckCircle2, Workflow, Smartphone, ShoppingBag, Search, 
-    ShoppingCart, Tag, CreditCard, Monitor, Package, RefreshCw, 
-    FileText, PieChart, Home, Calendar, Users, Shirt, Layers, 
+import {
+    Bot, LineChart, Stethoscope, GraduationCap, Zap, Shield, Network,
+    BarChart3, Globe2, Brain, MessageSquare, Database, ArrowRight,
+    CheckCircle2, Workflow, Smartphone, ShoppingBag, Search,
+    ShoppingCart, Tag, CreditCard, Monitor, Package, RefreshCw,
+    FileText, PieChart, Home, Calendar, Users, Shirt, Layers,
     Eye, Star, Lock, Target, BarChart, Mail, Box, Bed, Utensils
 } from "lucide-react";
 import React from 'react';
@@ -45,7 +45,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "iSuite AI",
         tagline: "Centralized Intelligence Layer",
         description: "iSuite AI acts as the intelligent brain of your digital ecosystem. It integrates data, automates complex workflows, and enables businesses to operate with precision and efficiency using enterprise-grade AI orchestration.",
-        image: `${import.meta.env.BASE_URL}isuiteai.png`,
+        image: `${import.meta.env.BASE_URL}mntai.png`,
         features: [
             { title: "Neural AI Orchestration", icon: Brain, description: "Unify multiple AI models into a high-performance decision engine." },
             { title: "Autonomous Workflows", icon: Zap, description: "Self-managing processes that adapt to real-time data shifts." },
@@ -117,7 +117,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "Quick Commerce",
         tagline: "Fast & Scalable Digital Retail",
         description: "The Quick Commerce platform enables businesses to launch high-performance online stores with smooth browsing, fast checkout experiences, and real-time product management capabilities designed for modern digital retail.",
-        image: `${import.meta.env.BASE_URL}isuitehealth.png`, // Using existing image for now
+        image: `${import.meta.env.BASE_URL}isuitec.png`,
         features: [
             { title: "Category Browsing", icon: Layers, description: "Seamless navigation through product departments." },
             { title: "Smart Search", icon: Search, description: "Find items quickly with SKU and barcode support." },
@@ -153,7 +153,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "POS System",
         tagline: "Smart Retail Operations",
         description: "Our POS system simplifies retail operations by integrating sales, inventory, and financial management into a single intuitive interface, helping businesses track performance and optimize daily store operations.",
-        image: `${import.meta.env.BASE_URL}isuiteedu.png`, // Using existing image for now
+        image: `${import.meta.env.BASE_URL}mntpos.png`,
         features: [
             { title: "Sales Analytics", icon: BarChart3, description: "Real-time tracking of store performance." },
             { title: "Inventory Tracking", icon: Box, description: "Automated alerts for low stock and restocks." },
@@ -189,7 +189,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "Mahal Management",
         tagline: "Unified Venue Orchestration",
         description: "The Mahal Management platform enables seamless management of event venues, bookings, and hospitality services. It helps event halls and venues efficiently coordinate weddings, corporate events, and large gatherings with ease.",
-        image: `${import.meta.env.BASE_URL}isuiteai.png`, // Placeholder
+        image: `${import.meta.env.BASE_URL}mntmm.png`,
         features: [
             { title: "Booking System", icon: Calendar, description: "Effortless management of hall and room availability." },
             { title: "Event Planning", icon: CheckCircle2, description: "Step-by-step coordination of event requirements." },
@@ -225,7 +225,7 @@ export const productsData: Record<string, ProductDetail> = {
         name: "Textile E-Commerce",
         tagline: "Fashion-First Digital Storefront",
         description: "The Textile E-Commerce platform enables fashion brands to sell online with powerful catalog management, curated collections, and a seamless shopping experience tailored for modern apparel businesses.",
-        image: `${import.meta.env.BASE_URL}isuiteio.png`, // Placeholder
+        image: `${import.meta.env.BASE_URL}mntecom.png`,
         features: [
             { title: "Dynamic Catalog", icon: Shirt, description: "Showcase thousands of fabrics and designs elegantly." },
             { title: "Curated Collections", icon: Layers, description: "Group products by season, style, or occasion." },
